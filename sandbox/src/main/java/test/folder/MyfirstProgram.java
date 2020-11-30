@@ -7,6 +7,6 @@ public class MyfirstProgram {
     System.out.println("Hello," + somebody+ "!");
     double l=8.0;
     double s=l*l;
-    System.out.println("Площадь квадрата со стороной" + l + "=" +s);
+    System.out.println("" + l + "=" +s);
   }
 }

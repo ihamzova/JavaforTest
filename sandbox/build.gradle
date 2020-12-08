@@ -3,4 +3,5 @@ apply plugin: 'application'
 mainClassName = "MyfirstProgram"
 repositories { mavenCentral() }
 
-dependencies { compile 'org.testng:testng:7.0.0' }
+dependencies { compile 'org.testng:testng:7.0.0'
+compile 'org.seleniumhq.selenium:selenium-java:4.0.0-alpha-7'}

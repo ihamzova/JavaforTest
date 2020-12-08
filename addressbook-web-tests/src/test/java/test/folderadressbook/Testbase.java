@@ -82,4 +82,12 @@ public class Testbase {
       return false;
     }
   }
+
+  protected void deleteSelectedGroups() {
+    wd.findElement(By.name("delete")).click();
+  }
+
+  protected void selectGroup() {
+    wd.findElement(By.xpath("(//input[@name='selected[]'])[2]")).click();
+  }
 }

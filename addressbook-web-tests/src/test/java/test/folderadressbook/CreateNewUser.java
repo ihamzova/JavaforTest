@@ -23,18 +23,36 @@ public class CreateNewUser {
     driver = new ChromeDriver();
     baseUrl = "https://www.google.com/";
     driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+    login("admin", "secret");
+  }
+
+  private void login(String name, String password) {
+    driver.get("http://localhost:8080/addressbook/");
+    driver.findElement(By.name("user")).clear();
+    driver.findElement(By.name("user")).sendKeys(name);
+    driver.findElement(By.name("pass")).click();
+    driver.findElement(By.name("pass")).clear();
+    driver.findElement(By.name("pass")).sendKeys(password);
+    driver.findElement(By.xpath("//input[@value='Login']")).click();
   }
 
   @Test
   public void testCreateNewUser() throws Exception {
-    driver.get("http://localhost:8080/addressbook/");
-    driver.findElement(By.name("user")).clear();
-    driver.findElement(By.name("user")).sendKeys("admin");
-    driver.findElement(By.name("pass")).click();
-    driver.findElement(By.name("pass")).clear();
-    driver.findElement(By.name("pass")).sendKeys("secret");
-    driver.findElement(By.xpath("//input[@value='Login']")).click();
-    driver.findElement(By.linkText("add new")).click();
+    createNewUser();
+    fillUserForm();
+    submitNewUser();
+    returnHomePage();
+  }
+
+  private void returnHomePage() {
+    driver.findElement(By.linkText("home page")).click();
+  }
+
+  private void submitNewUser() {
+    driver.findElement(By.xpath("(//input[@name='submit'])[2]")).click();
+  }
+
+  private void fillUserForm() {
     driver.findElement(By.name("firstname")).click();
     driver.findElement(By.name("firstname")).clear();
     driver.findElement(By.name("firstname")).sendKeys("Arina");
@@ -64,8 +82,10 @@ public class CreateNewUser {
     driver.findElement(By.name("byear")).click();
     driver.findElement(By.name("byear")).clear();
     driver.findElement(By.name("byear")).sendKeys("1990");
-    driver.findElement(By.xpath("(//input[@name='submit'])[2]")).click();
-    driver.findElement(By.linkText("home page")).click();
+  }
+
+  private void createNewUser() {
+    driver.findElement(By.linkText("add new")).click();
   }
 
   @AfterClass(alwaysRun = true)

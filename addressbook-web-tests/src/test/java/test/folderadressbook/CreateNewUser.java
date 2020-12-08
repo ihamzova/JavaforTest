@@ -39,7 +39,7 @@ public class CreateNewUser {
   @Test
   public void testCreateNewUser() throws Exception {
     createNewUser();
-    fillUserForm();
+    fillUserForm("Arina", "Ivanova", "monkey", "TestSchool", "89112097633", "ihamzova@yandex.ru", "13", "September", "1990");
     submitNewUser();
     returnHomePage();
   }
@@ -52,36 +52,36 @@ public class CreateNewUser {
     driver.findElement(By.xpath("(//input[@name='submit'])[2]")).click();
   }
 
-  private void fillUserForm() {
+  private void fillUserForm(String name, String surname, String nickname, String company, String phone, String email, String bday, String bmonth, String byear) {
     driver.findElement(By.name("firstname")).click();
     driver.findElement(By.name("firstname")).clear();
-    driver.findElement(By.name("firstname")).sendKeys("Arina");
+    driver.findElement(By.name("firstname")).sendKeys(name);
     driver.findElement(By.name("lastname")).click();
     driver.findElement(By.name("lastname")).clear();
-    driver.findElement(By.name("lastname")).sendKeys("Ivanova");
+    driver.findElement(By.name("lastname")).sendKeys(surname);
     driver.findElement(By.name("nickname")).click();
     driver.findElement(By.name("nickname")).clear();
-    driver.findElement(By.name("nickname")).sendKeys("monkey");
+    driver.findElement(By.name("nickname")).sendKeys(nickname);
     driver.findElement(By.name("theform")).click();
     driver.findElement(By.name("company")).click();
     driver.findElement(By.name("company")).clear();
-    driver.findElement(By.name("company")).sendKeys("TestSchool");
+    driver.findElement(By.name("company")).sendKeys(company);
     driver.findElement(By.name("mobile")).click();
     driver.findElement(By.name("mobile")).clear();
-    driver.findElement(By.name("mobile")).sendKeys("89112097633");
+    driver.findElement(By.name("mobile")).sendKeys(phone);
     driver.findElement(By.name("email")).click();
     driver.findElement(By.name("email")).click();
     driver.findElement(By.name("email")).clear();
-    driver.findElement(By.name("email")).sendKeys("ihamzova@yandex.ru");
+    driver.findElement(By.name("email")).sendKeys(email);
     driver.findElement(By.name("bday")).click();
-    new Select(driver.findElement(By.name("bday"))).selectByVisibleText("13");
+    new Select(driver.findElement(By.name("bday"))).selectByVisibleText(bday);
     driver.findElement(By.name("bday")).click();
     driver.findElement(By.name("bmonth")).click();
-    new Select(driver.findElement(By.name("bmonth"))).selectByVisibleText("September");
+    new Select(driver.findElement(By.name("bmonth"))).selectByVisibleText(bmonth);
     driver.findElement(By.name("bmonth")).click();
     driver.findElement(By.name("byear")).click();
     driver.findElement(By.name("byear")).clear();
-    driver.findElement(By.name("byear")).sendKeys("1990");
+    driver.findElement(By.name("byear")).sendKeys(byear);
   }
 
   private void createNewUser() {

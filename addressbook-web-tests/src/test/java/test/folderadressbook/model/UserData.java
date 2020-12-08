@@ -1,4 +1,4 @@
-package test.folderadressbook;
+package test.folderadressbook.model;
 
 public class UserData {
   private final String name;

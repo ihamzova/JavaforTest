@@ -9,7 +9,7 @@ import test.folderadressbook.model.GroupData;
 
 import java.util.concurrent.TimeUnit;
 
-public class ApplicationManager extends GroupHelper {
+public class ApplicationManager {
   public WebDriver wd;
 
   public void init() {

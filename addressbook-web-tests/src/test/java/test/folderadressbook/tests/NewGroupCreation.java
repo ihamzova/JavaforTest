@@ -3,7 +3,7 @@ package test.folderadressbook.tests;
 import org.testng.annotations.Test;
 import test.folderadressbook.model.GroupData;
 
-public class NewGroupCreation extends Testbase {
+public class NewGroupCreation {
 
   @Test
   public void testCreateNewGroup() throws Exception {

@@ -9,6 +9,7 @@ public class SessionHelper {
   public SessionHelper(WebDriver wd) {
     this.wd = wd;
   }
+
   public void login(String username, String password) {
     wd.findElement(By.name("user")).click();
     wd.findElement(By.name("user")).clear();

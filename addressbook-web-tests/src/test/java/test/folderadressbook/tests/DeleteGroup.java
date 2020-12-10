@@ -1,4 +1,4 @@
-package test.folderadressbook;
+package test.folderadressbook.tests;
 
 import org.testng.annotations.Test;
 

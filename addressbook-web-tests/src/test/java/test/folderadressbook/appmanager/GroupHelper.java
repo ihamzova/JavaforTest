@@ -44,3 +44,7 @@ public class GroupHelper {
     wd.findElement(By.xpath("(//input[@name='selected[]'])[2]")).click();
   }
 }
+
+
+
+

@@ -1,8 +1,10 @@
 package test.folderadressbook;
 
 import org.testng.annotations.Test;
+import test.folderadressbook.tests.GroupData;
+import test.folderadressbook.tests.Testbase;
 
-public class NewGroupCreation extends Testbase{
+public class NewGroupCreation extends Testbase {
 
   @Test
   public void testCreateNewGroup() throws Exception {

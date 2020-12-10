@@ -1,6 +1,5 @@
-package test.folderadressbook.tests;
+package test.folderadressbook.tests.tests;
 
-import org.openqa.selenium.By;
 import org.testng.annotations.Test;
 
 public class DeleteGroup extends Testbase {
@@ -9,13 +8,13 @@ public class DeleteGroup extends Testbase {
   @Test
   public void testDeleteGroup() throws Exception {
     gotoGroupPage();
-    selectGroup();
-    deleteGroup();
-    returnToGroupPage();
+    app.selectGroup();
+    app.deleteGroup();
+    app.returnToGroupPage();
   }
 
   public void gotoGroupPage() {
-    wd.findElement(By.linkText("groups")).click();
+    app.goToGroupPage();
   }
 
 

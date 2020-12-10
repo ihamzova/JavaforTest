@@ -5,6 +5,7 @@ import org.openqa.selenium.NoAlertPresentException;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+<<<<<<< HEAD:addressbook-web-tests/src/test/java/test/folderadressbook/Testbase.java
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeMethod;
 import test.folderadressbook.model.GroupData;
@@ -12,6 +13,17 @@ import java.util.concurrent.TimeUnit;
 
 public class Testbase {
   public WebDriver wd;
+=======
+
+import java.util.concurrent.TimeUnit;
+
+public class ApplicationManager {
+  WebDriver wd;
+
+  private NavigationHelper navigationHelper;
+  private GroupHelper groupHelper;
+  private SessionHelper sessionHelper;
+>>>>>>> parent of eb8e814... Revert "NavigationHelper":addressbook-web-tests/src/test/java/test/folderadressbook/appmanager/ApplicationManager.java
 
   @BeforeMethod(alwaysRun = true)
   public void setUp() throws Exception {
@@ -19,19 +31,13 @@ public class Testbase {
     wd = new ChromeDriver();
     wd.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
     wd.get("http://localhost:8080/addressbook/group.php");
-    login("admin", "secret");
+    groupHelper = new GroupHelper(wd);
+    navigationHelper = new NavigationHelper(wd);
+    sessionHelper=new SessionHelper(wd);
+    sessionHelper.login("admin", "secret");
   }
 
-  public void login(String username, String password) {
-    wd.findElement(By.name("user")).click();
-    wd.findElement(By.name("user")).clear();
-    wd.findElement(By.name("user")).sendKeys(username);
-    wd.findElement(By.name("pass")).click();
-    wd.findElement(By.name("pass")).clear();
-    wd.findElement(By.name("pass")).sendKeys(password);
-    wd.findElement(By.xpath("//input[@value='Login']")).click();
-  }
-
+<<<<<<< HEAD:addressbook-web-tests/src/test/java/test/folderadressbook/Testbase.java
   protected void returnToGroupPage() {
     wd.findElement(By.linkText("group page")).click();
   }
@@ -59,6 +65,9 @@ public class Testbase {
   protected void goToGroupPage() {
     wd.findElement(By.linkText("groups")).click();
   }
+=======
+
+>>>>>>> parent of eb8e814... Revert "NavigationHelper":addressbook-web-tests/src/test/java/test/folderadressbook/appmanager/ApplicationManager.java
 
   @AfterClass(alwaysRun = true)
   public void tearDown() throws Exception {
@@ -82,4 +91,15 @@ public class Testbase {
       return false;
     }
   }
+<<<<<<< HEAD:addressbook-web-tests/src/test/java/test/folderadressbook/Testbase.java
+=======
+
+  public GroupHelper getGroupHelper() {
+    return groupHelper;
+  }
+
+  public NavigationHelper getNavigationHelper() {
+    return navigationHelper;
+  }
+>>>>>>> parent of eb8e814... Revert "NavigationHelper":addressbook-web-tests/src/test/java/test/folderadressbook/appmanager/ApplicationManager.java
 }

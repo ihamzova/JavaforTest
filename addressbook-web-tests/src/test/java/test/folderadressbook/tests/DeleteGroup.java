@@ -24,6 +24,7 @@ public class DeleteGroup {
 
   @Test
   public void testDeleteGroup() throws Exception {
+<<<<<<< HEAD
     wd.get("http://localhost:8080/addressbook/");
     wd.findElement(By.name("user")).clear();
     wd.findElement(By.name("user")).sendKeys("admin");
@@ -41,6 +42,12 @@ public class DeleteGroup {
   public void tearDown() throws Exception {
     wd.quit();
 
+=======
+    app.getNavigationHelper().goToGroupPage();
+    app.getGroupHelper().selectGroup();
+    app.getGroupHelper().deleteSelectedGroups();
+    app.getGroupHelper().returnToGroupPage();
+>>>>>>> parent of eb8e814... Revert "NavigationHelper"
   }
 
   private boolean isElementPresent(By by) {

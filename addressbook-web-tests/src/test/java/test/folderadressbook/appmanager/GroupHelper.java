@@ -8,7 +8,7 @@ public class GroupHelper {
   private WebDriver wd;
 
   public GroupHelper(WebDriver wd) {
-    this.wd=wd;
+    this.wd = wd;
 
   }
 

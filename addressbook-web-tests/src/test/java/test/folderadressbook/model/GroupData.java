@@ -1,4 +1,4 @@
-package test.folderadressbook.tests;
+package test.folderadressbook.model;
 
 public class GroupData {
   private final String name;

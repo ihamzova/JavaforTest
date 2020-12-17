@@ -10,7 +10,7 @@ public class DeleteUser extends Testbase {
   @Test
   public void testDeleteUser() throws Exception {
     app.navigationHelper.returnHomePage();
-    app.userHelper.selectUser("27");
+    app.userHelper.selectUser("25");
     app.userHelper.deleteSelectedUser();
     app.navigationHelper.closeAlertPage();
     app.navigationHelper.returnHomePage();

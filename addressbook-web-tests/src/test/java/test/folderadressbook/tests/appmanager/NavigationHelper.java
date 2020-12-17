@@ -19,6 +19,6 @@ public class NavigationHelper extends Helperbase {
   }
 
   public void returnHomePage() {
-    wd.findElement(By.linkText("home page")).click();
+    wd.findElement(By.linkText("home")).click();
   }
 }

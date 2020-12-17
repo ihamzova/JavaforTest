@@ -1,18 +1,23 @@
 package test.folderadressbook.tests.appmanager;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.NoAlertPresentException;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.util.concurrent.TimeUnit;
 
-public class ApplicationManager {
+public class ApplicationManager  {
+
   public WebDriver wd;
 
-  private NavigationHelper navigationHelper;
-  private GroupHelper groupHelper;
-  private SessionHelper sessionHelper;
+
+  public UserHelper userHelper;
+  public NavigationHelper navigationHelper;
+  public GroupHelper groupHelper;
+  public SessionHelper sessionHelper;
+
 
   public void init() {
     System.setProperty("webdriver.chrome.driver", "C:\\chromedriver.exe");
@@ -22,6 +27,7 @@ public class ApplicationManager {
     groupHelper = new GroupHelper(wd);
     navigationHelper = new NavigationHelper(wd);
     sessionHelper = new SessionHelper(wd);
+    userHelper = new UserHelper(wd);
     sessionHelper.login("admin", "secret");
   }
 
@@ -48,4 +54,18 @@ public class ApplicationManager {
   public NavigationHelper getNavigationHelper() {
     return navigationHelper;
   }
+
+  public boolean isAlertPresent() {
+    try {
+     wd.switchTo().alert();
+      return true;
+    } catch (NoAlertPresentException e) {
+      return false;
+    }
+  }
+
+  public UserHelper getUserHelper() {
+    return userHelper;
+  }
+
 }

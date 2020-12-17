@@ -1,20 +1,22 @@
 package test.folderadressbook.tests.appmanager;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.NoAlertPresentException;
-import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.Select;
 import test.folderadressbook.tests.model.UserData;
 
 public class UserHelper {
-  protected WebDriver wd;
+  private WebDriver wd;
 
-  protected void submitNewUser() {
+  public UserHelper(WebDriver wd) {
+    this.wd = wd;
+  }
+
+  public void submitNewUser() {
     wd.findElement(By.xpath("(//input[@name='submit'])[2]")).click();
   }
 
-  protected void fillUserForm(UserData userData) {
+  public void fillUserForm(UserData userData) {
     wd.findElement(By.name("firstname")).click();
     wd.findElement(By.name("firstname")).clear();
     wd.findElement(By.name("firstname")).sendKeys(userData.getName());
@@ -46,27 +48,13 @@ public class UserHelper {
     wd.findElement(By.name("byear")).sendKeys(userData.getByear());
   }
 
-  protected void createNewUser() {
+  public void createNewUser() {
     wd.findElement(By.linkText("add new")).click();
   }
 
-  private boolean isElementPresent(By by) {
-    try {
-      wd.findElement(by);
-      return true;
-    } catch (NoSuchElementException e) {
-      return false;
-    }
-  }
-
-  private boolean isAlertPresent() {
-    try {
-      wd.switchTo().alert();
-      return true;
-    } catch (NoAlertPresentException e) {
-      return false;
-    }
-  }
+//  //public void returnHomePage() {
+//    wd.findElement(By.linkText("home page")).click();
+//  }
 
   public void deleteSelectedUser() {
     wd.findElement(By.xpath("//input[@value='Delete']")).click();

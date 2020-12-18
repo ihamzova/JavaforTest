@@ -18,7 +18,7 @@ public class NavigationHelper extends Helperbase {
     wd.switchTo().alert().accept();
   }
 
-  public void returnHomePage() {
+  public void goToHomePage() {
     click(By.linkText("home"));
   }
 

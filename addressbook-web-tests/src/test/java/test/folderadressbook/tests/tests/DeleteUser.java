@@ -8,11 +8,11 @@ public class DeleteUser extends Testbase {
 
   @Test
   public void testDeleteUser() throws Exception {
-    app.navigationHelper.returnHomePage();
+    app.navigationHelper.goToHomePage();
     app.userHelper.selectUser("29");
     app.userHelper.deleteSelectedUser();
     app.navigationHelper.closeAlertPage();
-    app.navigationHelper.returnHomePage();
+    app.navigationHelper.goToHomePage();
 
   }
 

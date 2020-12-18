@@ -35,4 +35,13 @@ public class UserHelper extends Helperbase {
   public void selectUser(String userID) {
     click(By.id(userID));
   }
+
+  public void initUserModification() {
+    click(By.xpath("//img[@alt='Edit']"));
+  }
+
+  public void submitModification() {
+    click(By.name("update"));
+
+  }
 }

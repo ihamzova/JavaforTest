@@ -3,7 +3,7 @@ package test.folderadressbook.tests.tests;
 import org.testng.annotations.Test;
 import test.folderadressbook.tests.model.UserData;
 
-public class CreateNewUser extends Testbase {
+public class UserCreation extends Testbase {
 
 
 

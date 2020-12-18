@@ -15,7 +15,7 @@ public class DeleteUser extends Testbase {
     app.navigationHelper.returnHomePage();
 
   }
-  
+
 }
 
 

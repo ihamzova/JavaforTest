@@ -3,7 +3,7 @@ package test.folderadressbook.tests.appmanager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-public class SessionHelper extends Helperbase{
+public class SessionHelper extends Helperbase {
 
   public SessionHelper(WebDriver wd) {
     super(wd);

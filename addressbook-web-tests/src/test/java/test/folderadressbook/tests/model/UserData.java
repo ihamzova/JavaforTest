@@ -7,20 +7,16 @@ public class UserData {
   private final String company;
   private final String phone;
   private final String email;
-  private final String bday;
-  private final String bmonth;
-  private final String byear;
 
-  public UserData(String name, String surname, String nickname, String company, String phone, String email, String bday, String bmonth, String byear) {
+
+  public UserData(String name, String surname, String nickname, String company, String phone, String email) {
     this.name = name;
     this.surname = surname;
     this.nickname = nickname;
     this.company = company;
     this.phone = phone;
     this.email = email;
-    this.bday = bday;
-    this.bmonth = bmonth;
-    this.byear = byear;
+
   }
 
   public String getName() {
@@ -47,15 +43,4 @@ public class UserData {
     return email;
   }
 
-  public String getBday() {
-    return bday;
-  }
-
-  public String getBmonth() {
-    return bmonth;
-  }
-
-  public String getByear() {
-    return byear;
-  }
 }

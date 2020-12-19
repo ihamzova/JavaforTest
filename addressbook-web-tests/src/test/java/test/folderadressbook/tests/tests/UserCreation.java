@@ -10,7 +10,7 @@ public class UserCreation extends Testbase {
   public void testCreateNewUser() throws Exception {
     app.getNavigationHelper().goToHomePage();
     app.getUserHelper().createNewUser();
-    app.getUserHelper().fillUserForm(new UserData("Barijna1", "Ivanovjich1", "mojnkey1", "TestSchjopol1", "898112097633k", "ihva@yandex.ru"));
+    app.getUserHelper().fillUserForm(new UserData("Barl6ijna11", "Ivanlo8vjich11", "moj6lnkey21", "TestSch8jlopol11", "89l81812097633k", "ihva@yandex.ru"));
     app.getUserHelper().submitNewUser();
     app.getNavigationHelper().goToHomePage();
   }

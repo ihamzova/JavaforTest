@@ -32,8 +32,8 @@ public class UserHelper extends Helperbase {
     click(By.xpath("//input[@value='Delete']"));
   }
 
-  public void selectUser(String userID) {
-    click(By.id(userID));
+  public void selectUser() {
+    click(By.xpath("//td[1]/input[@type='checkbox']"));
   }
 
   public void initUserModification() {

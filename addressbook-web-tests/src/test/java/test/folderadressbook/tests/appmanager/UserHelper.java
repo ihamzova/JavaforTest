@@ -24,7 +24,7 @@ public class UserHelper extends Helperbase {
 
   }
 
-  public void createNewUser() {
+  public void addNewUser() {
     click(By.linkText("add new"));
   }
 
@@ -33,8 +33,9 @@ public class UserHelper extends Helperbase {
   }
 
   public void selectUser() {
-    click(By.xpath("//td[1]/input[@type='checkbox']"));
+    click(By.name("selected[]"));
   }
+  //By.xpath("//td[1]/input[@type='checkbox']"));
 
   public void initUserModification() {
     click(By.xpath("//img[@alt='Edit']"));
@@ -43,5 +44,16 @@ public class UserHelper extends Helperbase {
   public void submitModification() {
     click(By.name("update"));
 
+  }
+
+  public void createUser(UserData userData) {
+    addNewUser();
+    fillUserForm(new UserData("Bar4", "Ivan12", "mo1", "Tes11", "89l818120", null));
+    submitNewUser();
+
+  }
+
+  public boolean isUserPresent() {
+    return isElementPresent(By.name("selected[]"));
   }
 }

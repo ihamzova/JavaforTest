@@ -33,7 +33,7 @@ public class GroupHelper extends Helperbase {
   }
 
   public void selectGroup() {
-    click(By.xpath("(//input[@name='selected[]'])[2]"));
+    click(By.name("selected[]"));
   }
 
   public void initGroupModification() {
@@ -42,5 +42,16 @@ public class GroupHelper extends Helperbase {
 
   public void submitGroupModification() {
     click(By.name("update"));
+  }
+
+  public void createGroup(GroupData group) {
+    initGroupCreation();
+    fillGroupForm(group);
+    submitGroupCreation();
+    returnToGroupPage();
+  }
+
+  public boolean isGroupPresent() {
+    return isElementPresent(By.name("selected[]"));
   }
 }

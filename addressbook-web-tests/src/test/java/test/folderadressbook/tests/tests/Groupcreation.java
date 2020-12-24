@@ -4,15 +4,17 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 import test.folderadressbook.tests.model.GroupData;
 
+import java.util.List;
+
 public class Groupcreation extends Testbase {
 
   @Test
   public void testCreateNewGroup() throws Exception {
-    int before=app.getGroupHelper().getGroupCount();
     app.getNavigationHelper().goToGroupPage();
+    List<GroupData> before= app.groupHelper.getGroupList();
     app.getGroupHelper().createGroup(new GroupData("test22", null, null));
-    int after= app.getGroupHelper().getGroupCount();
-    Assert.assertEquals(after,before+1);
+    List<GroupData> after= app.groupHelper.getGroupList();
+    Assert.assertEquals(after.size(),before.size()+1);
   }
 
 }

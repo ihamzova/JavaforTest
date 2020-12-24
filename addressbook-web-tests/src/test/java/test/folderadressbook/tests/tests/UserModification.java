@@ -1,7 +1,10 @@
 package test.folderadressbook.tests.tests;
 
+import org.testng.Assert;
 import org.testng.annotations.Test;
 import test.folderadressbook.tests.model.UserData;
+
+import java.util.List;
 
 public class UserModification extends Testbase {
 
@@ -11,11 +14,14 @@ public class UserModification extends Testbase {
     if (!app.getUserHelper().isUserPresent()) {
       app.getUserHelper().createUser(new UserData("Nih", "Fedorh", null, null, "8911287483", null));
     }
-    app.getUserHelper().selectUser();
+    List<UserData> before=app.userHelper.getUserList();
+    app.getUserHelper().selectUser(0);
     app.getUserHelper().initUserModification();
-    app.getUserHelper().fillUserForm(new UserData("Arina", "Belya", "fox", "Too", "891128758", "drighf@ya.ru"));
+    app.getUserHelper().fillUserForm(new UserData("Ari1", "Bely1", null, null, null, null));
     app.getUserHelper().submitModification();
     app.getNavigationHelper().goToHomePage();
+    List<UserData> after =app.userHelper.getUserList();
+    Assert.assertEquals(after.size(), before.size());
 
 
   }

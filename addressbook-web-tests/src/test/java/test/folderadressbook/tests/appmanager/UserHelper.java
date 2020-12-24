@@ -2,7 +2,11 @@ package test.folderadressbook.tests.appmanager;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import test.folderadressbook.tests.model.UserData;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class UserHelper extends Helperbase {
 
@@ -32,10 +36,11 @@ public class UserHelper extends Helperbase {
     click(By.xpath("//input[@value='Delete']"));
   }
 
-  public void selectUser() {
-    click(By.name("selected[]"));
+  public void selectUser(int index) {
+    wd.findElements(By.name("selected[]")).get(index).click();
+
   }
-  //By.xpath("//td[1]/input[@type='checkbox']"));
+
 
   public void initUserModification() {
     click(By.xpath("//img[@alt='Edit']"));
@@ -56,4 +61,19 @@ public class UserHelper extends Helperbase {
   public boolean isUserPresent() {
     return isElementPresent(By.name("selected[]"));
   }
-}
+
+  public int getUserCount() {
+    return wd.findElements(By.name("selected[]")).size();
+  }
+
+  public List<UserData> getUserList() {
+    List<UserData> userList = new ArrayList<>();
+    List<WebElement> elements = wd.findElements(By.tagName("tr"));
+    for (WebElement el : elements) {
+      String name = el.getText();
+      UserData userData= new UserData(name,null, null, null, null,null);
+      userList.add(userData);
+    }
+    return userList;
+
+}}

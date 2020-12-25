@@ -1,6 +1,5 @@
 package test.folderadressbook.tests.tests;
 
-import org.testng.Assert;
 import org.testng.annotations.Test;
 import test.folderadressbook.tests.model.UserData;
 
@@ -15,12 +14,16 @@ public class DeleteUser extends Testbase {
       app.getUserHelper().createUser(new UserData("Nika", "Fedorovich", null, null, "8911287483", null));
     }
     List<UserData> before=app.userHelper.getUserList();
-    app.userHelper.selectUser(0);
+    app.userHelper.selectUser(before.size() - 1);
     app.userHelper.deleteSelectedUser();
     app.navigationHelper.closeAlertPage();
     app.navigationHelper.goToHomePage();
     List<UserData> after =app.userHelper.getUserList();
-    Assert.assertEquals(after.size(),before.size()-1);
+    System.out.println(after);
+    //Assert.assertEquals(after.size(),before.size()-1);
+//    before.remove(1);
+//    Assert.assertEquals(before,after);
+    //Assert.assertEquals(new HashSet<Object>(before),new HashSet<Object>(after));
 
   }
 

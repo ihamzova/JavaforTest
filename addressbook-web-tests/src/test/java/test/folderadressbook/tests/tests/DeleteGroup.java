@@ -22,7 +22,10 @@ public class DeleteGroup extends Testbase {
     app.getGroupHelper().returnToGroupPage();
     List<GroupData> after = app.groupHelper.getGroupList();
     Assert.assertEquals(after.size(), before.size() - 1);
+    before.remove(before.size()-1);
+
+     Assert.assertEquals(before,after);
+
+    }
   }
 
-
-}

@@ -68,7 +68,7 @@ public class UserHelper extends Helperbase {
 
   public List<UserData> getUserList() {
     List<UserData> userList = new ArrayList<>();
-    List<WebElement> elements = wd.findElements(By.tagName("tr"));
+    List<WebElement> elements = wd.findElements(By.xpath("//tr[@name='entry']"));
     for (WebElement el : elements) {
       String name = el.getText();
       UserData userData= new UserData(name,null, null, null, null,null);

@@ -12,7 +12,7 @@ public class DeleteUser extends Testbase {
   public void testDeleteUser() throws Exception {
     app.navigationHelper.goToHomePage();
     if (!app.getUserHelper().isUserPresent()) {
-      app.getUserHelper().createUser(new UserData("Nika", "Fedorovich", null, null, "8911287483", null));
+      app.getUserHelper().createUser(new UserData( "Nika", "Fedorovich", null, null, "8911287483", null));
     }
     List<UserData> before = app.userHelper.getUserList();
     app.userHelper.selectUser(before.size() - 1);

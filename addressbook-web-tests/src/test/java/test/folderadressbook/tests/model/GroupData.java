@@ -3,7 +3,9 @@ package test.folderadressbook.tests.model;
 import java.util.Objects;
 
 public class GroupData {
-  private final int id;
+
+
+  private int id;
   private final String name;
   private final String header;
   private final String footer;
@@ -24,12 +26,14 @@ public class GroupData {
   public int getId() {
     return id;
   }
+  public void setId(int id) {
+    this.id = id;
+  }
 
   @Override
   public String toString() {
     return "GroupData{" +
-            "id='" + id + '\'' +
-            ", name='" + name + '\'' +
+            "name='" + name + '\'' +
             '}';
   }
 
@@ -58,4 +62,5 @@ public class GroupData {
   public int hashCode() {
     return Objects.hash(id, name);
   }
+
 }

@@ -70,10 +70,13 @@ public class UserHelper extends Helperbase {
     List<UserData> userList = new ArrayList<>();
     List<WebElement> elements = wd.findElements(By.xpath("//tr[@name='entry']"));
     for (WebElement el : elements) {
-      String name = el.getText();
-      UserData userData= new UserData(name,null, null, null, null,null);
+      String firstname = el.findElement(By.xpath(".//td[3]")).getText();
+      String surname = el.findElement(By.xpath(".//td[2]")).getText();
+      int id = Integer.parseInt(el.findElement(By.tagName("input")).getAttribute("value"));
+      UserData userData = new UserData(id, firstname, surname, null, null, null, null);
       userList.add(userData);
     }
     return userList;
 
-}}
+  }
+}

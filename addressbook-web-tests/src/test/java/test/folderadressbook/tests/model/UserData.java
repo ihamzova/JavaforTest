@@ -3,6 +3,9 @@ package test.folderadressbook.tests.model;
 import java.util.Objects;
 
 public class UserData {
+
+
+  private final int id;
   private final String name;
   private final String surname;
   private final String nickname;
@@ -11,7 +14,8 @@ public class UserData {
   private final String email;
 
 
-  public UserData(String name, String surname, String nickname, String company, String phone, String email) {
+  public UserData(int id, String name, String surname, String nickname, String company, String phone, String email) {
+    this.id = id;
     this.name = name;
     this.surname = surname;
     this.nickname = nickname;
@@ -21,6 +25,19 @@ public class UserData {
 
   }
 
+  public UserData(String name, String surname, String nickname, String company, String phone, String email) {
+    this.id = 0;
+    this.name = name;
+    this.surname = surname;
+    this.nickname = nickname;
+    this.company = company;
+    this.phone = phone;
+    this.email = email;
+
+  }
+  public int getId() {
+    return id;
+  }
   public String getName() {
     return name;
   }
@@ -66,4 +83,5 @@ public class UserData {
             ", surname='" + surname + '\'' +
             '}';
   }
+
 }

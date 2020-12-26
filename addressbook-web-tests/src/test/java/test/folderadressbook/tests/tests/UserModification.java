@@ -4,7 +4,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 import test.folderadressbook.tests.model.UserData;
 
-import java.util.HashSet;
+import java.util.Comparator;
 import java.util.List;
 
 public class UserModification extends Testbase {
@@ -18,7 +18,7 @@ public class UserModification extends Testbase {
     List<UserData> before = app.userHelper.getUserList();
     app.getUserHelper().selectUser(0);
     app.getUserHelper().initUserModification();
-    UserData user = new UserData(before.get(before.size() - 1).getId(), "Максим", "Круглов", null, null, null, null);
+    UserData user = new UserData(before.get(0).getId(), "Максим", "Круглов", null, null, null, null);
     app.getUserHelper().fillUserForm(user);
     app.getUserHelper().submitModification();
     app.getNavigationHelper().goToHomePage();
@@ -26,8 +26,10 @@ public class UserModification extends Testbase {
     Assert.assertEquals(after.size(), before.size());
     before.remove(0);
     before.add(user);
-
-    Assert.assertEquals(new HashSet<Object>(before), new HashSet<Object>(after));
+    Comparator<? super UserData> byId = (u1, u2) -> Integer.compare(u1.getId(), u2.getId());
+    before.sort(byId);
+    after.sort(byId);
+    Assert.assertEquals(before, after);
 
 
   }

@@ -5,7 +5,11 @@ import java.util.Objects;
 public class UserData {
 
 
-  private final int id;
+  public void setId(int id) {
+    this.id = id;
+  }
+
+  private int id;
   private final String name;
   private final String surname;
   private final String nickname;
@@ -26,7 +30,7 @@ public class UserData {
   }
 
   public UserData(String name, String surname, String nickname, String company, String phone, String email) {
-    this.id = 0;
+    this.id = Integer.MAX_VALUE;
     this.name = name;
     this.surname = surname;
     this.nickname = nickname;
@@ -79,7 +83,8 @@ public class UserData {
   @Override
   public String toString() {
     return "UserData{" +
-            "name='" + name + '\'' +
+            "id=" + id +
+            ", name='" + name + '\'' +
             ", surname='" + surname + '\'' +
             '}';
   }

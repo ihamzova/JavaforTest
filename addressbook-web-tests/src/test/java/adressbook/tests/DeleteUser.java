@@ -1,15 +1,15 @@
-package test.folderadressbook.tests.tests;
+package adressbook.tests;
 
+import adressbook.model.UserData;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import test.folderadressbook.tests.model.UserData;
 
 import java.util.Comparator;
 import java.util.List;
 
 public class DeleteUser extends Testbase {
 
-  @Test
+  @Test(enabled = false)
   public void testDeleteUser() throws Exception {
     app.navigationHelper.goToHomePage();
     if (!app.getUserHelper().isUserPresent()) {

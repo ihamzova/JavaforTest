@@ -1,9 +1,9 @@
-package test.folderadressbook.tests.appmanager;
+package adressbook.appmanager;
 
+import adressbook.model.UserData;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import test.folderadressbook.tests.model.UserData;
 
 import java.util.ArrayList;
 import java.util.List;

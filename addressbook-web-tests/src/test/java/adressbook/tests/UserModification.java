@@ -1,15 +1,15 @@
-package test.folderadressbook.tests.tests;
+package adressbook.tests;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import test.folderadressbook.tests.model.UserData;
+import adressbook.model.UserData;
 
 import java.util.Comparator;
 import java.util.List;
 
 public class UserModification extends Testbase {
 
-  @Test
+  @Test (enabled = false)
   public void testUserModification() {
     app.getNavigationHelper().goToHomePage();
     if (!app.getUserHelper().isUserPresent()) {

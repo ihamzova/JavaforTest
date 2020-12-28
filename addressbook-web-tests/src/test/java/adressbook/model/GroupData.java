@@ -1,4 +1,4 @@
-package test.folderadressbook.tests.model;
+package adressbook.model;
 
 import java.util.Objects;
 

@@ -1,8 +1,8 @@
-package test.folderadressbook.tests.tests;
+package adressbook.tests;
 
+import adressbook.model.UserData;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import test.folderadressbook.tests.model.UserData;
 
 import java.util.Comparator;
 import java.util.List;
@@ -10,7 +10,7 @@ import java.util.List;
 public class UserCreation extends Testbase {
 
 
-  @Test
+  @Test(enabled = false)
   public void testCreateNewUser() throws Exception {
     app.getNavigationHelper().goToHomePage();
     List<UserData> before = app.userHelper.getUserList();

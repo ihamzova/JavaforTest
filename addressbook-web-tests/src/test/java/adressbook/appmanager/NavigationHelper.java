@@ -1,4 +1,4 @@
-package test.folderadressbook.tests.appmanager;
+package adressbook.appmanager;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;

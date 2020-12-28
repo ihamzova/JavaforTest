@@ -1,8 +1,8 @@
-package test.folderadressbook.tests.tests;
+package adressbook.tests;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import test.folderadressbook.tests.model.GroupData;
+import adressbook.model.GroupData;
 
 import java.util.Comparator;
 import java.util.List;

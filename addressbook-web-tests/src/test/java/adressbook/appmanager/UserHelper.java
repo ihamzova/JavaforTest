@@ -21,11 +21,6 @@ public class UserHelper extends Helperbase {
   public void fillUserForm(UserData userData) {
     type("firstname", userData.getName());
     type("lastname", userData.getSurname());
-    type("nickname", userData.getNickname());
-    type("company", userData.getCompany());
-    type("mobile", userData.getPhone());
-    type("email", userData.getEmail());
-
   }
 
   public void addNewUser() {
@@ -53,12 +48,12 @@ public class UserHelper extends Helperbase {
 
   public void createUser(UserData userData) {
     addNewUser();
-    fillUserForm(new UserData("Bar4", "Ivan12", "mo1", "Tes11", "89l818120", null));
+    fillUserForm(new UserData().withName("Анна").withSurname("Сидорова"));
     submitNewUser();
 
   }
 
-  public boolean isUserPresent() {
+  public boolean isThereAUser() {
     return isElementPresent(By.name("selected[]"));
   }
 
@@ -66,17 +61,40 @@ public class UserHelper extends Helperbase {
     return wd.findElements(By.name("selected[]")).size();
   }
 
-  public List<UserData> getUserList() {
+  public List<UserData> userList() {
     List<UserData> userList = new ArrayList<>();
     List<WebElement> elements = wd.findElements(By.xpath("//tr[@name='entry']"));
     for (WebElement el : elements) {
       String firstname = el.findElement(By.xpath(".//td[3]")).getText();
       String surname = el.findElement(By.xpath(".//td[2]")).getText();
       int id = Integer.parseInt(el.findElement(By.tagName("input")).getAttribute("value"));
-      UserData userData = new UserData(id, firstname, surname, null, null, null, null);
+      UserData userData = new UserData().withtId(id).withName(firstname).withSurname(surname);
       userList.add(userData);
     }
     return userList;
 
+  }
+
+  public UserData modifyUser(UserData user, int index) {
+    selectUser(index);
+    initUserModification();
+    fillUserForm(user);
+    submitModification();
+    return user;
+  }
+
+  public void closeAlertPage() {
+    wd.switchTo().alert().accept();
+  }
+
+  public void deleteUser(int index) {
+    selectUser(index);
+    deleteSelectedUser();
+    closeAlertPage();
+  }
+  public void сreateUser(UserData user) {
+    addNewUser();
+    fillUserForm(user);
+    submitNewUser();
   }
 }

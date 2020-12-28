@@ -1,34 +1,43 @@
 package adressbook.tests;
 
-import org.testng.Assert;
-import org.testng.annotations.Test;
 import adressbook.model.GroupData;
+import org.testng.Assert;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
 
 import java.util.Comparator;
 import java.util.List;
 
 public class DeleteGroup extends Testbase {
-
-
-  @Test
-  public void testDeleteGroup() throws Exception {
-    app.navigationHelper.goToGroupPage();
-    if (!app.getGroupHelper().isGroupPresent()) {
-      app.getGroupHelper().createGroup(new GroupData("Testgroup32", null, null));
-
+  @BeforeMethod
+  public void ensurePrecondition() {
+    app.goTo().groupPage();
+    if (app.group().list().size()==0) {
+      app.group().create(new GroupData().withName("tesst1"));
     }
-    List<GroupData> before = app.groupHelper.getGroupList();
-    app.getGroupHelper().selectGroup(before.size() - 1);
-    app.getGroupHelper().deleteGroup();
-    app.getGroupHelper().returnToGroupPage();
-    List<GroupData> after = app.groupHelper.getGroupList();
+
+  }
+
+
+    @Test
+    public void testDeleteGroup () throws Exception {
+    List<GroupData> before = app.group().list();
+    int index = before.size() - 1;
+    delete(index);
+    List<GroupData> after = app.group().list();
     Assert.assertEquals(after.size(), before.size() - 1);
-    before.remove(before.size() - 1);
+    before.remove(index);
     Comparator<? super GroupData> byId = (g1, g2) -> Integer.compare(g1.getId(), g2.getId());
     before.sort(byId);
     after.sort(byId);
     Assert.assertEquals(before, after);
 
+  }
+
+  private void delete(int index) {
+    app.group().selectGroup(index);
+    app.group().deleteGroup();
+    app.group().returnToGroupPage();
   }
 }
 

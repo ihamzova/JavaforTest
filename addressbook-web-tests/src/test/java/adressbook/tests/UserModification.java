@@ -1,6 +1,7 @@
 package adressbook.tests;
 
 import org.testng.Assert;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import adressbook.model.UserData;
 
@@ -8,23 +9,25 @@ import java.util.Comparator;
 import java.util.List;
 
 public class UserModification extends Testbase {
-
-  @Test (enabled = false)
-  public void testUserModification() {
-    app.getNavigationHelper().goToHomePage();
-    if (!app.getUserHelper().isUserPresent()) {
-      app.getUserHelper().createUser(new UserData("Nih", "Fedorh", null, null, null, null));
+  @BeforeMethod
+  public void ensurePrecondition() {
+    app.goTo().homePage();
+    if (app.user().userList().size() == 0) {
+      app.user().createUser(new UserData().withName("Петр").withSurname("Кузнецов"));
     }
-    List<UserData> before = app.userHelper.getUserList();
-    app.getUserHelper().selectUser(0);
-    app.getUserHelper().initUserModification();
-    UserData user = new UserData(before.get(0).getId(), "Максим", "Круглов", null, null, null, null);
-    app.getUserHelper().fillUserForm(user);
-    app.getUserHelper().submitModification();
-    app.getNavigationHelper().goToHomePage();
-    List<UserData> after = app.userHelper.getUserList();
+
+  }
+
+  @Test
+  public void testUserModification() {
+    List<UserData> before = app.user().userList();
+    int index = 0;
+    UserData user = new UserData().withtId(before.get(index).getId()).withName("Максим").withSurname("Харченко");
+    app.user().modifyUser(user, index);
+    app.goTo().homePage();
+    List<UserData> after = app.user().userList();
     Assert.assertEquals(after.size(), before.size());
-    before.remove(0);
+    before.remove(index);
     before.add(user);
     Comparator<? super UserData> byId = (u1, u2) -> Integer.compare(u1.getId(), u2.getId());
     before.sort(byId);
@@ -33,5 +36,6 @@ public class UserModification extends Testbase {
 
 
   }
+
 
 }

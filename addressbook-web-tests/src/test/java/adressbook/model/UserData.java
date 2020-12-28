@@ -3,67 +3,41 @@ package adressbook.model;
 import java.util.Objects;
 
 public class UserData {
+  private int id = Integer.MAX_VALUE;
+  private String name;
+  private String surname;
+  private String nickname;
+  private String company;
+  private String phone;
+  private String email;
 
-
-  public void setId(int id) {
-    this.id = id;
-  }
-
-  private int id;
-  private final String name;
-  private final String surname;
-  private final String nickname;
-  private final String company;
-  private final String phone;
-  private final String email;
-
-
-  public UserData(int id, String name, String surname, String nickname, String company, String phone, String email) {
-    this.id = id;
+  public UserData withName(String name) {
     this.name = name;
-    this.surname = surname;
-    this.nickname = nickname;
-    this.company = company;
-    this.phone = phone;
-    this.email = email;
-
+    return this;
   }
 
-  public UserData(String name, String surname, String nickname, String company, String phone, String email) {
-    this.id = Integer.MAX_VALUE;
-    this.name = name;
+  public UserData withSurname(String surname) {
     this.surname = surname;
-    this.nickname = nickname;
-    this.company = company;
-    this.phone = phone;
-    this.email = email;
-
+    return this;
   }
+
+
+  public UserData withtId(int id) {
+    this.id = id;
+    return this;
+  }
+
+
   public int getId() {
     return id;
   }
+
   public String getName() {
     return name;
   }
 
   public String getSurname() {
     return surname;
-  }
-
-  public String getNickname() {
-    return nickname;
-  }
-
-  public String getCompany() {
-    return company;
-  }
-
-  public String getPhone() {
-    return phone;
-  }
-
-  public String getEmail() {
-    return email;
   }
 
   @Override

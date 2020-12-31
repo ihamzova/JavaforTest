@@ -5,31 +5,27 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-import java.util.Comparator;
-import java.util.List;
+import java.util.Set;
 
 public class DeleteGroup extends Testbase {
   @BeforeMethod
   public void ensurePrecondition() {
     app.goTo().groupPage();
-    if (app.group().list().size()==0) {
+    if (app.group().all().size() == 0) {
       app.group().create(new GroupData().withName("tesst1"));
     }
 
   }
 
 
-    @Test
-    public void testDeleteGroup () throws Exception {
-    List<GroupData> before = app.group().list();
+  @Test
+  public void testDeleteGroup() throws Exception {
+    Set<GroupData> before = app.group().all();
     int index = before.size() - 1;
     delete(index);
-    List<GroupData> after = app.group().list();
+    Set<GroupData> after = app.group().all();
     Assert.assertEquals(after.size(), before.size() - 1);
     before.remove(index);
-    Comparator<? super GroupData> byId = (g1, g2) -> Integer.compare(g1.getId(), g2.getId());
-    before.sort(byId);
-    after.sort(byId);
     Assert.assertEquals(before, after);
 
   }

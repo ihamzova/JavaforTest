@@ -6,10 +6,6 @@ public class UserData {
   private int id = Integer.MAX_VALUE;
   private String name;
   private String surname;
-  private String nickname;
-  private String company;
-  private String phone;
-  private String email;
 
   public UserData withName(String name) {
     this.name = name;
@@ -20,7 +16,6 @@ public class UserData {
     this.surname = surname;
     return this;
   }
-
 
   public UserData withtId(int id) {
     this.id = id;
@@ -45,13 +40,14 @@ public class UserData {
     if (this == o) return true;
     if (o == null || getClass() != o.getClass()) return false;
     UserData userData = (UserData) o;
-    return Objects.equals(name, userData.name) &&
+    return id == userData.id &&
+            Objects.equals(name, userData.name) &&
             Objects.equals(surname, userData.surname);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(name, surname);
+    return Objects.hash(id, name, surname);
   }
 
   @Override

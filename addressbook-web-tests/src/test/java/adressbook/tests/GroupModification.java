@@ -25,12 +25,13 @@ public class GroupModification extends Testbase {
   public void testGroupModification() {
 
     Set<GroupData> before = app.group().all();
-    int index = 0;
-    GroupData group = new GroupData().withId(before.get(index).getId()).withName("Testgroup55");
-    app.group().modify(index, group);
+    GroupData modifiedGroup = before.iterator().next();
+    GroupData group = new GroupData().
+            withId(modifiedGroup.getId()).withName("Testgroup55").withHeader("группа1");
+    app.group().modify(group);
     Set<GroupData> after = app.group().all();
     Assert.assertEquals(after.size(), before.size());
-    before.remove(index);
+    before.remove(modifiedGroup);
     before.add(group);
     Assert.assertEquals(before, after);
 

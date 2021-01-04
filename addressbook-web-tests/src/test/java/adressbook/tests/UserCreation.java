@@ -1,11 +1,13 @@
 package adressbook.tests;
 
 import adressbook.model.UserData;
+import com.sun.source.doctree.SeeTree;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import java.util.Comparator;
 import java.util.List;
+import java.util.Set;
 
 public class UserCreation extends Testbase {
 
@@ -13,16 +15,14 @@ public class UserCreation extends Testbase {
   @Test
   public void testCreateNewUser() throws Exception {
     app.goTo().homePage();
-    List<UserData> before = app.user().userList();
-    UserData user = new UserData().withName("Василий").withSurname("Волков");
+    Set<UserData> before = app.user().all();
+    UserData user = new UserData().withName("Василиса").withSurname("Волковна");
     app.user().сreateUser(user);
     app.goTo().homePage();
-    List<UserData> after = app.user().userList();
+    Set<UserData> after = app.user().all();
     Assert.assertEquals(after.size(), before.size() + 1);
+    user.withtId(after.stream().mapToInt((u) -> u.getId()).max().getAsInt());//сравнение групп по id->поток id
     before.add(user);
-    Comparator<? super UserData> byId = (u1, u2) -> Integer.compare(u1.getId(), u2.getId());
-    before.sort(byId);
-    after.sort(byId);
     Assert.assertEquals(before, after);
 
   }

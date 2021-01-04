@@ -6,7 +6,9 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 public class UserHelper extends Helperbase {
 
@@ -61,13 +63,13 @@ public class UserHelper extends Helperbase {
     return wd.findElements(By.name("selected[]")).size();
   }
 
-  public List<UserData> userList() {
-    List<UserData> userList = new ArrayList<>();
+  public Set<UserData> all() {
+    Set<UserData> userList = new HashSet<>();
     List<WebElement> elements = wd.findElements(By.xpath("//tr[@name='entry']"));
     for (WebElement el : elements) {
       String firstname = el.findElement(By.xpath(".//td[3]")).getText();
       String surname = el.findElement(By.xpath(".//td[2]")).getText();
-      int id = Integer.parseInt(el.findElement(By.tagName("input")).getAttribute("value"));
+      int id = Integer.parseInt(el.findElement(By.tagName("input")).getAttribute("id"));
       UserData userData = new UserData().withtId(id).withName(firstname).withSurname(surname);
       userList.add(userData);
     }
@@ -96,5 +98,23 @@ public class UserHelper extends Helperbase {
     addNewUser();
     fillUserForm(user);
     submitNewUser();
+  }
+
+  public void delete(UserData user) {
+    selectUserbyId(user.getId());
+    deleteSelectedUser();
+    closeAlertPage();
+  }
+
+  private void selectUserbyId(int id) {
+    wd.findElement(By.cssSelector("input[value='" + id+ "']")).click();
+
+  }
+
+  public void modify(UserData user) {
+    selectUserbyId(user.getId());
+    initUserModification();
+    fillUserForm(user);
+    submitModification();
   }
 }

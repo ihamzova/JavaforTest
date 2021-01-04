@@ -21,11 +21,11 @@ public class DeleteGroup extends Testbase {
   @Test
   public void testDeleteGroup() throws Exception {
     Set<GroupData> before = app.group().all();
-    int index = before.size() - 1;
-    delete(index);
+    GroupData deletedGroup = before.iterator().next();
+    app.group().delete(deletedGroup);
     Set<GroupData> after = app.group().all();
     Assert.assertEquals(after.size(), before.size() - 1);
-    before.remove(index);
+    before.remove(deletedGroup);
     Assert.assertEquals(before, after);
 
   }

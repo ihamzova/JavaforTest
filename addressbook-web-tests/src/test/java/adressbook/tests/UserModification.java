@@ -7,12 +7,13 @@ import adressbook.model.UserData;
 
 import java.util.Comparator;
 import java.util.List;
+import java.util.Set;
 
 public class UserModification extends Testbase {
   @BeforeMethod
   public void ensurePrecondition() {
     app.goTo().homePage();
-    if (app.user().userList().size() == 0) {
+    if (app.user().all().size() == 0) {
       app.user().createUser(new UserData().withName("Петр").withSurname("Кузнецов"));
     }
 
@@ -20,18 +21,16 @@ public class UserModification extends Testbase {
 
   @Test
   public void testUserModification() {
-    List<UserData> before = app.user().userList();
-    int index = 0;
-    UserData user = new UserData().withtId(before.get(index).getId()).withName("Максим").withSurname("Харченко");
-    app.user().modifyUser(user, index);
+    Set<UserData> before = app.user().all();
+    UserData modifiedUser = before.iterator().next();
+    UserData user = new UserData().
+            withtId(modifiedUser.getId()).withName("Кристина").withSurname("Левонова");
+    app.user().modify(user);
     app.goTo().homePage();
-    List<UserData> after = app.user().userList();
+    Set<UserData> after = app.user().all();
     Assert.assertEquals(after.size(), before.size());
-    before.remove(index);
+    before.remove(modifiedUser);
     before.add(user);
-    Comparator<? super UserData> byId = (u1, u2) -> Integer.compare(u1.getId(), u2.getId());
-    before.sort(byId);
-    after.sort(byId);
     Assert.assertEquals(before, after);
 
 

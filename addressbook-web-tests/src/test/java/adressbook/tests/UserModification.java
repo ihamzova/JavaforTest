@@ -1,13 +1,11 @@
 package adressbook.tests;
 
-import org.testng.Assert;
+import adressbook.model.Users;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import adressbook.model.UserData;
-
-import java.util.Comparator;
-import java.util.List;
-import java.util.Set;
+import static org.hamcrest.CoreMatchers.equalTo;
+import static org.hamcrest.MatcherAssert.assertThat;
 
 public class UserModification extends Testbase {
   @BeforeMethod
@@ -21,18 +19,15 @@ public class UserModification extends Testbase {
 
   @Test
   public void testUserModification() {
-    Set<UserData> before = app.user().all();
+    Users before = app.user().all();
     UserData modifiedUser = before.iterator().next();
     UserData user = new UserData().
             withtId(modifiedUser.getId()).withName("Кристина").withSurname("Левонова");
     app.user().modify(user);
     app.goTo().homePage();
-    Set<UserData> after = app.user().all();
-    Assert.assertEquals(after.size(), before.size());
-    before.remove(modifiedUser);
-    before.add(user);
-    Assert.assertEquals(before, after);
-
+    Users after = app.user().all();
+    assertThat(after.size(), equalTo(before.size()));
+    assertThat(after, equalTo(before.without(modifiedUser).withadded(user)));
 
   }
 

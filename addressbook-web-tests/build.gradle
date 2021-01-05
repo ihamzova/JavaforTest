@@ -14,5 +14,6 @@ dependencies {
     compile 'org.testng:testng:7.1.0'
     compile 'org.seleniumhq.selenium:selenium-java:3.141.59'
     compile group: 'org.slf4j', name: 'slf4j-log4j12', version: '1.7.29'
+    compile 'org.hamcrest:hamcrest:2.2'
 
 }

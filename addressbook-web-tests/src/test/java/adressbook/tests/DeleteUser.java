@@ -1,13 +1,12 @@
 package adressbook.tests;
 
 import adressbook.model.UserData;
-import org.testng.Assert;
+import adressbook.model.Users;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
-
-import java.util.Comparator;
-import java.util.List;
-import java.util.Set;
+import static org.hamcrest.CoreMatchers.equalTo;
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.testng.Assert.assertEquals;
 
 public class DeleteUser extends Testbase {
   @BeforeMethod
@@ -20,14 +19,15 @@ public class DeleteUser extends Testbase {
 
   @Test
   public void testDeleteUser() throws Exception {
-    Set<UserData> before = app.user().all();
+    Users before = app.user().all();
     UserData deletedUser = before.iterator().next();
     app.user().delete(deletedUser);
     app.goTo().homePage();
-    Set<UserData> after = app.user().all();
-    Assert.assertEquals(after.size(), before.size() - 1);
+    Users after = app.user().all();
+    assertEquals(after.size(), before.size() - 1);
     before.remove(deletedUser);
-    Assert.assertEquals(before, after);
+    assertEquals(before, after);
+    assertThat(after, equalTo(before.without(deletedUser)));
 
 
   }

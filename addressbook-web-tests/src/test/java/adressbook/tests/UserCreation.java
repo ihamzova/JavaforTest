@@ -1,13 +1,9 @@
 package adressbook.tests;
-
 import adressbook.model.UserData;
-import com.sun.source.doctree.SeeTree;
-import org.testng.Assert;
+import adressbook.model.Users;
 import org.testng.annotations.Test;
-
-import java.util.Comparator;
-import java.util.List;
-import java.util.Set;
+import static org.hamcrest.CoreMatchers.equalTo;
+import static org.hamcrest.MatcherAssert.assertThat;
 
 public class UserCreation extends Testbase {
 
@@ -15,16 +11,13 @@ public class UserCreation extends Testbase {
   @Test
   public void testCreateNewUser() throws Exception {
     app.goTo().homePage();
-    Set<UserData> before = app.user().all();
+    Users before = app.user().all();
     UserData user = new UserData().withName("Василиса").withSurname("Волковна");
     app.user().сreateUser(user);
     app.goTo().homePage();
-    Set<UserData> after = app.user().all();
-    Assert.assertEquals(after.size(), before.size() + 1);
-    user.withtId(after.stream().mapToInt((u) -> u.getId()).max().getAsInt());//сравнение групп по id->поток id
-    before.add(user);
-    Assert.assertEquals(before, after);
-
+    Users after = app.user().all();
+    assertThat(after.size(), equalTo(before.size() + 1));
+    assertThat(after, equalTo(before.withadded(user.withtId(after.stream().mapToInt((u) -> u.getId()).max().getAsInt()))));
   }
 
 

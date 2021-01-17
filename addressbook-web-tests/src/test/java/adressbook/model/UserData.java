@@ -1,5 +1,6 @@
 package adressbook.model;
 
+import java.io.File;
 import java.util.Objects;
 
 public class UserData {
@@ -15,6 +16,17 @@ public class UserData {
   private String email;
   private String email2;
   private String email3;
+
+  public File getPhoto() {
+    return photo;
+  }
+
+  public UserData withPhoto(File photo) {
+    this.photo = photo;
+    return this;
+  }
+
+  private File photo;
 
   public String getEmail3() {
     return email3;
@@ -40,7 +52,7 @@ public class UserData {
   public String getaddress() {
     return address;
   }
-  public UserData withaddress(String alladdress) {
+  public UserData withaddress(String address) {
     this.address = address;
     return this;
   }

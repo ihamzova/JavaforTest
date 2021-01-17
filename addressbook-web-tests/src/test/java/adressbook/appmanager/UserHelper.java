@@ -49,9 +49,10 @@ public class UserHelper extends Helperbase {
   }
 
 
-  public void fillUserForm(UserData userData) {
-    type("firstname", userData.getName());
-    type("lastname", userData.getSurname());
+  public void fillUserForm(UserData user) {
+    type("firstname", user.getName());
+    type("lastname", user.getSurname());
+    attach("photo",user.getPhoto());
   }
 
   public UserData modifyUser(UserData user, int index) {

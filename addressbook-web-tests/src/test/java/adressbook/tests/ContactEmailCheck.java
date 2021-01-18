@@ -25,8 +25,7 @@ public class ContactEmailCheck extends Testbase{
   }
   public String mergeEmails(UserData user) {
     return Arrays.asList(user.getEmail(),user.getEmail2(),user.getEmail3())
-            .stream()
-            .filter(s -> !s.equals(""))
+            .stream().filter(s -> s != null &&!s.equals(""))
             .map(ContactEmailCheck::cleaned).collect(Collectors.joining("\n"));
   }
 }

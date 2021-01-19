@@ -1,0 +1,35 @@
+[
+  {
+    "name": "Ирина 0",
+    "surname": "Кузнецова 0",
+    "homephones": "1110",
+    "mobilephones": "2220",
+    "workphones": "3330",
+    "address": "Москва 0",
+    "email": "email10@mail.com",
+    "email2": "email20@mail.com",
+    "email3": "email30@mail.com"
+  },
+  {
+    "name": "Ирина 1",
+    "surname": "Кузнецова 1",
+    "homephones": "1111",
+    "mobilephones": "2221",
+    "workphones": "3331",
+    "address": "Москва 1",
+    "email": "email11@mail.com",
+    "email2": "email21@mail.com",
+    "email3": "email31@mail.com"
+  },
+  {
+    "name": "Ирина 2",
+    "surname": "Кузнецова 2",
+    "homephones": "1112",
+    "mobilephones": "2222",
+    "workphones": "3332",
+    "address": "Москва 2",
+    "email": "email12@mail.com",
+    "email2": "email22@mail.com",
+    "email3": "email32@mail.com"
+  }
+]

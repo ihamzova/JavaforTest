@@ -122,13 +122,23 @@ public class UserHelper extends Helperbase {
     userCache = new Users();
     List<WebElement> elements = wd.findElements(By.xpath("//tr[@name='entry']"));
     for (WebElement el : elements) {
-      String firstname = el.findElement(By.xpath(".//td[3]")).getText();
-      String surname = el.findElement(By.xpath(".//td[2]")).getText();
+      List<WebElement> cells = el.findElements(By.tagName("td"));
+      String firstname = cells.get(2).getText();
+      String surname = cells.get(1).getText();
       int id = Integer.parseInt(el.findElement(By.tagName("input")).getAttribute("id"));
-      UserData userData = new UserData().withtId(id).withName(firstname).withSurname(surname);
-      userCache.add(userData);
+      String allPhones = cells.get(5).getText();
+      String allemails = cells.get(4).getText();
+      String address = cells.get(3).getText();
+
+      userCache.add(new UserData().
+              withName(firstname).
+              withSurname(surname).
+              withtId(id).
+              withAllphones(allPhones).
+              withAllemails(allemails).
+              withaddress(address));
     }
-    return userCache;
+    return new Users(userCache);
 
   }
 
@@ -165,8 +175,11 @@ public class UserHelper extends Helperbase {
     String email3 = wd.findElement(By.name("email3")).getAttribute("value");
     String address = wd.findElement(By.name("address")).getAttribute("value");
     wd.navigate().back();
-    return new UserData().withtId(userData.getId()).withName(userData.getName()).withSurname(userData.getSurname()).withHomenumber(userData.getHomephones())
-            .withMobilenumber(userData.getMobilephones()).withWorknumber(userData.getWorkphones());
+    return new UserData().withtId(userData.getId())
+            .withName(userData.getName())
+            .withSurname(userData.getSurname())
+            .withHomenumber(homenumber)
+            .withMobilenumber(mobilenumber).withWorknumber(worknumber).withEmail(email).withEmail2(email2).withEmail3(email3).withaddress(address);
 
   }
 }

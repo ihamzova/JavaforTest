@@ -16,17 +16,16 @@ public class UserData {
   private String email;
   private String email2;
   private String email3;
+  private File photo;
 
   public File getPhoto() {
     return photo;
   }
-
   public UserData withPhoto(File photo) {
     this.photo = photo;
     return this;
   }
 
-  private File photo;
 
   public String getEmail3() {
     return email3;

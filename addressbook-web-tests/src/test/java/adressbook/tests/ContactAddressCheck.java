@@ -3,10 +3,6 @@ package adressbook.tests;
 
 import adressbook.model.UserData;
 import org.testng.annotations.Test;
-
-import java.util.Arrays;
-import java.util.stream.Collectors;
-
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.MatcherAssert.assertThat;
 

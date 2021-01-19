@@ -16,6 +16,6 @@ dependencies {
     compile group: 'org.slf4j', name: 'slf4j-log4j12', version: '1.7.29'
     compile 'org.hamcrest:hamcrest:2.2'
     compile 'com.beust:jcommander:1.75'
-    compile ''
+    compile 'com.thoughtworks.xstream:xstream:1.4.15'
 
 }

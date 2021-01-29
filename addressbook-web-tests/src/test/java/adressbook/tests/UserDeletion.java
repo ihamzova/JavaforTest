@@ -8,7 +8,7 @@ import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.testng.Assert.assertEquals;
 
-public class DeleteUser extends Testbase {
+public class UserDeletion extends Testbase {
   @BeforeMethod
   public void ensurePrecondition() {
     app.goTo().homePage();

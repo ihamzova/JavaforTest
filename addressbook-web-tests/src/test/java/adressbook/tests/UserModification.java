@@ -22,7 +22,7 @@ public class UserModification extends Testbase {
     Users before = app.user().all();
     UserData modifiedUser = before.iterator().next();
     UserData user = new UserData().
-            withtId(modifiedUser.getId()).withName("Кристина").withSurname("Левонова");
+            withtId(modifiedUser.getId()).withName("Крис19").withSurname("Кирова28");
     app.user().modify(user);
     app.goTo().homePage();
     Users after = app.user().all();

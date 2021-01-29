@@ -20,30 +20,31 @@ public class Groupcreation extends Testbase {
   @DataProvider
 
   public Iterator<Object[]> validGroupsFromXml() throws IOException {
-    BufferedReader reader = new BufferedReader((new FileReader("src/test/resources/groups.xml")));
-    String xml= "";
-    String line = reader.readLine();
-    while (line != null) {
-    String[] split = line.split(";");
-     xml += line;
-      line = reader.readLine();
+    try (BufferedReader reader = new BufferedReader((new FileReader("src/test/resources/groups.xml")))) {
+      String xml = "";
+      String line = reader.readLine();
+      while (line != null) {
+        String[] split = line.split(";");
+        xml += line;
+        line = reader.readLine();
 
+      }
+      XStream xStream = new XStream();
+      List<GroupData> groups = (List<GroupData>) xStream.fromXML(xml);
+      return groups.stream().map((g) -> new Object[]{g}).collect(Collectors.toList()).iterator();
     }
-    XStream xStream = new XStream();
-    List<GroupData> groups = (List<GroupData>) xStream.fromXML(xml);
-    return groups.stream().map((g) -> new Object[]{g}).collect(Collectors.toList()).iterator();
 
 
   }
 
-    @Test(dataProvider = "validGroupsFromXml")
-    public void testCreateNewGroup (GroupData group) throws Exception {
-      app.goTo().groupPage();
-      Groups before = app.group().all();
-      app.group().create(group);
-      assertThat(app.group().getGroupCount(), equalTo(before.size() + 1));
-      Groups after = app.group().all();
-      assertThat(after, equalTo(before.withadded(group.withId(after.stream().mapToInt((g) -> g.getId()).max().getAsInt()))));
-    }
-
+  @Test(dataProvider = "validGroupsFromXml")
+  public void testCreateNewGroup(GroupData group) throws Exception {
+    app.goTo().groupPage();
+    Groups before = app.group().all();
+    app.group().create(group);
+    assertThat(app.group().getGroupCount(), equalTo(before.size() + 1));
+    Groups after = app.group().all();
+    assertThat(after, equalTo(before.withadded(group.withId(after.stream().mapToInt((g) -> g.getId()).max().getAsInt()))));
   }
+
+}

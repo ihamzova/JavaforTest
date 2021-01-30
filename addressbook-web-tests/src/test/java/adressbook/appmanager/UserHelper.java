@@ -77,6 +77,7 @@ public class UserHelper extends Helperbase {
     initUserModificationbyId(user.getId());
     fillUserForm(user);
     submitModification();
+    userCache = null;
   }
 
   private void initUserModificationbyId(int id) {

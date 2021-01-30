@@ -21,9 +21,22 @@ dependencies {
 
 }
 
-test {
+task testGroups (type: Test) {
     useTestNG {
-        suites 'src/test/resources/testng.xml'
+        suites 'src/test/resources/testng-groups.xml'
     }
+    if(project.hasProperty('browser')){
+        systemProperty 'browser',"${browser}"}
+    if(project.hasProperty('target')){
+        systemProperty 'target',"${target}"}
 }
 
+task testUsers (type: Test) {
+    useTestNG {
+        suites 'src/test/resources/testng-users.xml'
+    }
+    if(project.hasProperty('browser')){
+    systemProperty 'browser',"${browser}"}
+    if(project.hasProperty('target')){
+        systemProperty 'target',"${target}"}
+}

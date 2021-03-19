@@ -13,7 +13,7 @@ import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
 public class ApplicationManager {
-private final Properties properties;
+  private final Properties properties;
   public WebDriver wd;
 
 
@@ -22,8 +22,9 @@ private final Properties properties;
   public GroupHelper groupHelper;
   public SessionHelper sessionHelper;
   public String browser;
+  public DbHelper dbHelper;
 
-  public ApplicationManager(String browser)  {
+  public ApplicationManager(String browser) {
     this.browser = browser;
     properties = new Properties();
 
@@ -34,6 +35,7 @@ private final Properties properties;
 
     String target = System.getProperty("target", "local");
     properties.load(new FileReader(new File(String.format("src/test/resources/%s.properties", target))));
+    dbHelper = new DbHelper();
     if (browser.equals(BrowserType.CHROME)) {
       wd = new ChromeDriver();
     } else if (browser.equals(BrowserType.FIREFOX)) {
@@ -48,7 +50,8 @@ private final Properties properties;
     navigationHelper = new NavigationHelper(wd);
     sessionHelper = new SessionHelper(wd);
     userHelper = new UserHelper(wd);
-    sessionHelper.login(properties.getProperty("web.login"),properties.getProperty("web.password"));
+    sessionHelper.login(properties.getProperty("web.login"), properties.getProperty("web.password"));
+
   }
 
 
@@ -67,6 +70,10 @@ private final Properties properties;
 
   public UserHelper user() {
     return userHelper;
+  }
+
+  public DbHelper db() {
+    return dbHelper;
   }
 
 }

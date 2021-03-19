@@ -31,7 +31,7 @@ public class HbConnectionTest {
     }
   }
 
-  @Test
+  @Test()
   public void testHbConnection() {
     Session session = sessionFactory.openSession();
     session.beginTransaction();
@@ -42,3 +42,17 @@ public class HbConnectionTest {
     session.getTransaction().commit();
     session.close();
   }}
+
+//  @Test
+//  public void testHbConnection() {
+//    Session session = sessionFactory.openSession();
+//    session.beginTransaction();
+//    List<UserData> result = session.createQuery("from UserData").list();
+//    for (UserData user : result) {
+//      System.out.println(user);
+//    }
+//    session.getTransaction().commit();
+//    session.close();
+//  }
+//}
+

@@ -1,51 +1,84 @@
 package addressbook.model;
 
-import com.google.gson.annotations.Expose;
+import org.hibernate.annotations.Type;
 
+import javax.persistence.*;
 import java.io.File;
 import java.util.Objects;
 
+@Entity
+
+@Table(name = "addressbook")
 public class UserData {
+
+  @Id
+  @Column(name = "id")
   private int id = Integer.MAX_VALUE;
-  @Expose
+
+  @Column(name = "firstname")
   private String name;
 
-  @Expose
+
+  @Column(name = "lastname")
   private String surname;
 
-  @Expose
+
+  @Column(name = "home")
+  @Type(type = "text")
   private String homephones;
 
-  @Expose
+
+  @Column(name = "mobile")
+  @Type(type = "text")
   private String mobilephones;
 
-  @Expose
+
+  @Column(name = "work")
+  @Type(type = "text")
   private String workphones;
 
+  @Transient
   private String allphones;
+  @Transient
   private String allemails;
 
-  @Expose
+
+  @Column(name = "address")
+  @Type(type = "text")
   private String address;
 
-  @Expose
+  @Column(name = "email")
+  @Type(type = "text")
   private String email;
 
-  @Expose
+
+  @Column(name = "email2")
+  @Type(type = "text")
   private String email2;
 
-  @Expose
+
+  @Column(name = "email3")
+  @Type(type = "text")
   private String email3;
 
-  @Expose
-  private File photo;
+  @Column(name = "photo")
+  @Type(type = "text")
+  private String photo;
+
+  @Transient
+  private String group;
+
 
   public File getPhoto() {
-    return photo;
+    if (photo == null) {
+      return null;
+    } else {
+      return new File(photo);
+    }
   }
 
   public UserData withPhoto(File photo) {
-    this.photo = photo;
+    this.photo = photo.getPath();
     return this;
   }
 

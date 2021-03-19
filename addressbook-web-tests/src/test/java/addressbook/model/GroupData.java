@@ -3,10 +3,7 @@ package addressbook.model;
 import org.hibernate.annotations.Type;
 
 import javax.persistence.*;
-import java.util.HashSet;
 import java.util.Objects;
-import java.util.Set;
-
 
 
 @Entity
@@ -28,21 +25,7 @@ public class GroupData {
   @Type(type = "text")
   private String footer;
 
-  @Override
-  public boolean equals(Object o) {
-    if (this == o) return true;
-    if (o == null || getClass() != o.getClass()) return false;
-    GroupData groupData = (GroupData) o;
-    return id == groupData.id &&
-            Objects.equals(name, groupData.name) &&
-            Objects.equals(header, groupData.header) &&
-            Objects.equals(footer, groupData.footer);
-  }
 
-  @Override
-  public int hashCode() {
-    return Objects.hash(id, name, header, footer);
-  }
 
   public int getId() {
     return id;
@@ -68,14 +51,6 @@ public class GroupData {
     return this;
   }
 
-  @Override
-  public String toString() {
-    return "GroupData{" +
-            "id=" + id +
-            ", name='" + name + '\'' +
-            '}';
-  }
-
   public String getName() {
     return name;
   }
@@ -84,9 +59,40 @@ public class GroupData {
     return header;
   }
 
+  @Override
+  public boolean equals(Object o) {
+    if (this == o) return true;
+    if (o == null || getClass() != o.getClass()) return false;
+
+    GroupData groupData = (GroupData) o;
+
+    if (id != groupData.id) return false;
+    if (!Objects.equals(name, groupData.name)) return false;
+    if (!Objects.equals(header, groupData.header)) return false;
+    return Objects.equals(footer, groupData.footer);
+  }
+
+  @Override
+  public int hashCode() {
+    int result = id;
+    result = 31 * result + (name != null ? name.hashCode() : 0);
+    result = 31 * result + (header != null ? header.hashCode() : 0);
+    result = 31 * result + (footer != null ? footer.hashCode() : 0);
+    return result;
+  }
+
+  @Override
+  public String toString() {
+    return "GroupData{" +
+            "id=" + id +
+            ", name='" + name + '\'' +
+            ", header='" + header + '\'' +
+            ", footer='" + footer + '\'' +
+            '}';
+  }
+
   public String getFooter() {
     return footer;
   }
-
 
 }

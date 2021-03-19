@@ -4,14 +4,15 @@ import addressbook.model.Users;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import addressbook.model.UserData;
+
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.MatcherAssert.assertThat;
 
 public class UserModification extends Testbase {
   @BeforeMethod
   public void ensurePrecondition() {
-    app.goTo().homePage();
-    if (app.user().all().size() == 0) {
+    if (app.db().groups().size() == 0) {
+      app.goTo().homePage();
       app.user().createUser(new UserData().withName("Петр").withSurname("Кузнецов"));
     }
 

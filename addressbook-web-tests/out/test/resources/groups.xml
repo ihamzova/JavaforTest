@@ -1,26 +1,20 @@
 <list>
-  <adressbook.model.GroupData>
-    <id>2147483647</id>
-    <name>test 0</name>
-    <header>test 0</header>
-    <footer>test 0</footer>
-  </adressbook.model.GroupData>
-  <adressbook.model.GroupData>
+  <addressbook.model.GroupData>
     <id>2147483647</id>
     <name>test 1</name>
     <header>test 1</header>
     <footer>test 1</footer>
-  </adressbook.model.GroupData>
-  <adressbook.model.GroupData>
+  </addressbook.model.GroupData>
+  <addressbook.model.GroupData>
     <id>2147483647</id>
     <name>test 2</name>
     <header>test 2</header>
     <footer>test 2</footer>
-  </adressbook.model.GroupData>
-  <adressbook.model.GroupData>
+  </addressbook.model.GroupData>
+  <addressbook.model.GroupData>
     <id>2147483647</id>
     <name>test 3</name>
     <header>test 3</header>
     <footer>test 3</footer>
-  </adressbook.model.GroupData>
+  </addressbook.model.GroupData>
 </list>

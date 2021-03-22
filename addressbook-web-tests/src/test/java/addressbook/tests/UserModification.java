@@ -11,7 +11,7 @@ import static org.hamcrest.MatcherAssert.assertThat;
 public class UserModification extends Testbase {
   @BeforeMethod
   public void ensurePrecondition() {
-    if (app.db().groups().size() == 0) {
+    if (app.db().users().size() == 0) {
       app.goTo().homePage();
       app.user().createUser(new UserData().withName("Петр").withSurname("Кузнецов"));
     }
@@ -20,13 +20,13 @@ public class UserModification extends Testbase {
 
   @Test
   public void testUserModification() {
-    Users before = app.user().all();
+    Users before = app.db().users();
     UserData modifiedUser = before.iterator().next();
     UserData user = new UserData().
             withtId(modifiedUser.getId()).withName("Крис19").withSurname("Кирова28");
     app.user().modify(user);
-    app.goTo().homePage();
-    Users after = app.user().all();
+//    app.goTo().homePage();
+    Users after = app.db().users();
     assertThat(after.size(), equalTo(before.size()));
     assertThat(after, equalTo(before.without(modifiedUser).withadded(user)));
 

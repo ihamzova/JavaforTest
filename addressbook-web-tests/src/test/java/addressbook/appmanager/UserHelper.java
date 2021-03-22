@@ -85,7 +85,8 @@ public class UserHelper extends Helperbase {
   }
 
   public void deleteSelectedUser() {
-    click(By.xpath("//div/div[4]/form[2]/div[2]/input"));
+    click(By.xpath("//input[@value='Delete']"));
+    //click(By.xpath("//div/div[4]/form[2]/div[2]/input"));
   }
 
   public void deleteUser(int index) {

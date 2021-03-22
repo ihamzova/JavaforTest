@@ -67,9 +67,9 @@ public class GroupData {
     GroupData groupData = (GroupData) o;
 
     if (id != groupData.id) return false;
-    if (!Objects.equals(name, groupData.name)) return false;
-    if (!Objects.equals(header, groupData.header)) return false;
-    return Objects.equals(footer, groupData.footer);
+    if (name != null ? !name.equals(groupData.name) : groupData.name != null) return false;
+    if (header != null ? !header.equals(groupData.header) : groupData.header != null) return false;
+    return footer != null ? footer.equals(groupData.footer) : groupData.footer == null;
   }
 
   @Override

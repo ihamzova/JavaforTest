@@ -40,11 +40,11 @@ public class Groupcreation extends Testbase {
   @Test(dataProvider = "validGroupsFromXml")
   public void testCreateNewGroup(GroupData group) throws Exception {
     app.goTo().groupPage();
-    Groups before = app.group().all();
+    Groups before = app.db().groups();
     app.group().create(group);
     assertThat(app.group().getGroupCount(), equalTo(before.size() + 1));
-    Groups after = app.group().all();
-    assertThat(after, equalTo(before.withadded(group.withId(after.stream().mapToInt(GroupData::getId).max().getAsInt()))));
+    Groups after = app.db().groups();
+    assertThat(after, equalTo(before.withadded(group.withId(after.stream().mapToInt((g) -> g.getId()).max().getAsInt()))));
   }
 
 }

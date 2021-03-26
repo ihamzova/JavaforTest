@@ -4,6 +4,7 @@ import addressbook.model.UserData;
 import addressbook.model.Users;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
+
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.testng.Assert.assertEquals;
@@ -23,9 +24,11 @@ public class UserDeletion extends Testbase {
     Users before = app.db().users();
     UserData deletedUser = before.iterator().next();
     app.user().delete(deletedUser);
+    app.waitForMessage();
     Users after = app.db().users();
-   assertThat(after.size(), equalTo(before.size() - 1));
+    assertThat(after.size(), equalTo(before.size() - 1));
     assertThat(after, equalTo(before.without(deletedUser)));
+    verifyUserListinUi();
 
 
   }

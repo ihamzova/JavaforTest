@@ -22,13 +22,12 @@ public class UserModification extends Testbase {
   public void testUserModification() {
     Users before = app.db().users();
     UserData modifiedUser = before.iterator().next();
-    UserData user = new UserData().
-            withtId(modifiedUser.getId()).withName("Крис19").withSurname("Кирова28");
+    UserData user = new UserData().withtId(modifiedUser.getId()).withName("Крис19").withSurname("Кирова28");
     app.user().modify(user);
-//    app.goTo().homePage();
     Users after = app.db().users();
     assertThat(after.size(), equalTo(before.size()));
     assertThat(after, equalTo(before.without(modifiedUser).withadded(user)));
+    verifyUserListinUi();
 
   }
 

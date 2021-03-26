@@ -52,6 +52,7 @@ public class UserCreation extends Testbase {
     Users after = app.db().users();
     assertThat(after.size(), equalTo(before.size() + 1));
     assertThat(after, equalTo(before.withadded(user.withtId(after.stream().mapToInt((u) -> u.getId()).max().getAsInt()))));
+    verifyGroupListinUi();
   }
 
   @Test

@@ -2,6 +2,7 @@ package addressbook.tests;
 
 
 import addressbook.model.GroupData;
+import addressbook.model.UserData;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.boot.MetadataSources;
@@ -31,28 +32,30 @@ public class HbConnectionTest {
     }
   }
 
-  @Test()
-  public void testHbConnection() {
-    Session session = sessionFactory.openSession();
-    session.beginTransaction();
-    List<GroupData> result = session.createQuery( "from GroupData" ).list();
-    for (GroupData group : result ) {
-      System.out.println( group );
-    }
-    session.getTransaction().commit();
-    session.close();
-  }}
-
-//  @Test
+//  @Test()
 //  public void testHbConnection() {
 //    Session session = sessionFactory.openSession();
 //    session.beginTransaction();
-//    List<UserData> result = session.createQuery("from UserData").list();
-//    for (UserData user : result) {
-//      System.out.println(user);
-//    }
+//    List<GroupData> result = session.createQuery( "from GroupData" ).list();
 //    session.getTransaction().commit();
 //    session.close();
-//  }
-//}
+//    for (GroupData group : result ) {
+//      System.out.println( group );
+//      System.out.println(group.getUsers());
+//    }
+//  }}
+
+  @Test
+  public void testHbConnection() {
+    Session session = sessionFactory.openSession();
+    session.beginTransaction();
+    List<UserData> result = session.createQuery("from UserData").list();
+    session.getTransaction().commit();
+    session.close();
+    for (UserData user : result) {
+      System.out.println(user);
+      System.out.println(user.getGroups());
+    }
+  }
+}
 

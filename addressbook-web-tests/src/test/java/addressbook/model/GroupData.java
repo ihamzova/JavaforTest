@@ -3,7 +3,9 @@ package addressbook.model;
 import org.hibernate.annotations.Type;
 
 import javax.persistence.*;
+import java.util.HashSet;
 import java.util.Objects;
+import java.util.Set;
 
 
 @Entity
@@ -26,7 +28,12 @@ public class GroupData {
   private String footer;
 
 
+  @ManyToMany(mappedBy = "groups")
+  private Set<UserData> users = new HashSet<UserData>();
 
+  public Set<UserData> getUsers() {
+    return new Users(users);
+  }
   public int getId() {
     return id;
   }

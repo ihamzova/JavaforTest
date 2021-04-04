@@ -16,6 +16,8 @@ import java.io.IOException;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
+
+
 public class ApplicationManager {
   private final Properties properties;
   public WebDriver wd;
@@ -58,7 +60,6 @@ public class ApplicationManager {
 
   }
 
-
   public void stop() {
     wd.quit();
   }
@@ -66,7 +67,9 @@ public class ApplicationManager {
     WebElement wait = new WebDriverWait(wd, 5).until(ExpectedConditions.presenceOfElementLocated(By.cssSelector("div[class='msgbox']")));
   }
 
-
+  public DbHelper db() {
+    return dbHelper;
+  }
   public GroupHelper group() {
     return groupHelper;
   }
@@ -79,8 +82,6 @@ public class ApplicationManager {
     return userHelper;
   }
 
-  public DbHelper db() {
-    return dbHelper;
-  }
+
 
 }

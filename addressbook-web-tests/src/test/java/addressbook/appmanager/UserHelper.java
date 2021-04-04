@@ -1,10 +1,12 @@
 package addressbook.appmanager;
 
+import addressbook.model.GroupData;
 import addressbook.model.UserData;
 import addressbook.model.Users;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.Select;
 
 import java.util.HashSet;
 import java.util.List;
@@ -53,6 +55,35 @@ public class UserHelper extends Helperbase {
     type("firstname", user.getName());
     type("lastname", user.getSurname());
     attach("photo",user.getPhoto());
+  }
+
+  public void addToGroup(UserData userData, GroupData group) {
+    userCache = null;
+    selectUserbyId(userData.getId());
+    selectGroupInList(group.getId());
+    initAddToGroup();
+    //waitForMessage();
+  }
+  public void initAddToGroup() {
+    wd.findElement(By.name("add")).click();
+  }
+
+  public void initDeleteFromGroup() {
+    wd.findElement(By.name("remove")).click();
+  }
+
+  public void selectGroupInList(int groupId) {
+    new Select(wd.findElement(By.name("to_group"))).selectByValue(String.valueOf(groupId));
+  }
+
+  public void groupPage(int groupId) {
+    new Select(wd.findElement(By.name("group"))).selectByValue(String.valueOf(groupId));
+  }
+  public void removeFromGroup(UserData userData, GroupData group) {
+    userCache = null;
+    selectUserbyId(userData.getId());
+    initDeleteFromGroup();
+    waitForMessage();
   }
 
   public UserData modifyUser(UserData user, int index) {

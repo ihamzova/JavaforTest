@@ -55,5 +55,7 @@ public class Helperbase {
       return false;
     }
   }
-
+  public void waitForMessage() {
+    WebElement wait = new WebDriverWait(wd, 5).until(ExpectedConditions.presenceOfElementLocated(By.cssSelector("div[class='msgbox']")));
+  }
 }

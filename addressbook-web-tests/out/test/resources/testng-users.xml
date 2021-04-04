@@ -3,9 +3,9 @@
 <suite name="Suite1" verbose="1" >
     <test name="Users">
         <classes>
-            <class name="addressbook.tests.UserCreation" />
-            <class name="addressbook.tests.UserModification" />
-            <class name="addressbook.tests.UserDeletion" />
+            <class name="addressbook.mantis.mantis.tests.tests.UserCreation" />
+            <class name="addressbook.mantis.mantis.tests.tests.UserModification" />
+            <class name="addressbook.mantis.mantis.tests.tests.UserDeletion" />
         </classes>
     </test>
 </suite>

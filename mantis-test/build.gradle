@@ -14,11 +14,18 @@ dependencies {
     compile 'org.testng:testng:7.1.0'
     compile 'org.seleniumhq.selenium:selenium-java:3.141.59'
     compile 'org.hamcrest:hamcrest:2.2'
-
+    compile 'org.apache.httpcomponents:httpclient:4.5.13'
+    compile 'org.subethamail:subethasmtp:3.1.7'
+    compile 'commons-net:commons-net:3.7.2'
+    compile 'org.subethamail:subethasmtp:3.1.7'
+    compile'ru.lanwen.verbalregex:java-verbal-expressions:1.6'
+    compile 'ch.qos.logback:logback-classic:1.2.3'
+    implementation 'mysql:mysql-connector-java:5.1.49'
+    implementation 'org.hibernate:hibernate-core:5.4.27.Final'
 
 }
 
- test {
+test {
     useTestNG {
         suites 'src/test/resources/testng.xml'
     }

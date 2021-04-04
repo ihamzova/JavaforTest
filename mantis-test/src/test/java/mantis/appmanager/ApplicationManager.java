@@ -20,10 +20,15 @@ import java.util.concurrent.TimeUnit;
 public class ApplicationManager {
   private final Properties properties;
   public WebDriver wd;
-
-
   public String browser;
-
+  private RegistrationHelper registrationHelper;
+  private FtpHelper ftp;
+  private MailHelper mailHelper;
+  private DbHelper dbHelper;
+  private SessionHelper session;
+  private NavigationHelper goTo;
+  private UserHelper user;
+  private SessionHelper sessionHelper;
 
   public ApplicationManager(String browser) {
     this.browser = browser;
@@ -52,12 +57,78 @@ public class ApplicationManager {
   }
 
   public void stop() {
-    wd.quit();
+    if (wd != null) {
+      wd.quit();
+    }
   }
 
-  public void waitForMessage() {
-    WebElement wait = new WebDriverWait(wd, 5).until(ExpectedConditions.presenceOfElementLocated(By.cssSelector("div[class='msgbox']")));
+  public HttpSession newSession(){
+    return new HttpSession(this);
   }
 
+  public String getProperty(String key) {
+    return properties.getProperty(key);
+  }
+
+
+
+  public WebDriver getDriver() {
+    if (wd == null) {
+      if (browser.equals(BrowserType.CHROME)) {
+        wd = new ChromeDriver();
+      } else if (browser.equals(BrowserType.FIREFOX)) {
+        wd = new FirefoxDriver();
+      } else if (browser.equals(BrowserType.IE)) {
+        wd = new InternetExplorerDriver();
+      }
+      wd.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
+      wd.get(properties.getProperty("web.baseUrl"));
+    }
+    return wd;
+  }
+
+  public RegistrationHelper registration() {
+    if (registrationHelper == null) {
+      registrationHelper = new RegistrationHelper(this);
+    }
+    return registrationHelper;
+  }
+  public MailHelper mail() {
+    if (mailHelper == null) {
+      mailHelper = new MailHelper(this);
+    }
+    return mailHelper;
+  }
+  public FtpHelper ftp() {
+    if (ftp == null) {
+      ftp = new FtpHelper(this);
+    }
+    return ftp;
+  }
+
+  public DbHelper db() {
+    return dbHelper;
+  }
+
+  public SessionHelper session() {
+    if (session == null) {
+      session = new SessionHelper(this);
+    }
+    return session;
+  }
+
+  public NavigationHelper goTo() {
+    if (goTo == null) {
+      goTo = new NavigationHelper(this);
+    }
+    return goTo;
+  }
+
+  public UserHelper user() {
+    if (user == null) {
+      user = new UserHelper(this);
+    }
+    return user;
+  }
 
 }

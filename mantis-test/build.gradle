@@ -1,41 +1,55 @@
-plugins {
-    id 'java'
-}
-
-group 'org.example'
-version '1.0-SNAPSHOT'
+apply plugin: 'java'
 
 repositories {
     mavenCentral()
-}
+    dependencies {
 
-dependencies {
+        compile 'org.testng:testng:7.1.0'
+        compile 'org.seleniumhq.selenium:selenium-java:3.141.59'
+        compile 'org.hamcrest:hamcrest:2.2'
+        compile 'org.apache.httpcomponents:httpclient:4.5.13'
+        compile 'org.subethamail:subethasmtp:3.1.7'
+        compile 'commons-net:commons-net:3.7.2'
+        compile 'org.subethamail:subethasmtp:3.1.7'
+        compile 'ru.lanwen.verbalregex:java-verbal-expressions:1.6'
+        compile 'ch.qos.logback:logback-classic:1.2.3'
+        implementation 'mysql:mysql-connector-java:5.1.49'
+        implementation 'org.hibernate:hibernate-core:5.4.27.Final'
 
-    compile 'org.testng:testng:7.1.0'
-    compile 'org.seleniumhq.selenium:selenium-java:3.141.59'
-    compile 'org.hamcrest:hamcrest:2.2'
-    compile 'org.apache.httpcomponents:httpclient:4.5.13'
-    compile 'org.subethamail:subethasmtp:3.1.7'
-    compile 'commons-net:commons-net:3.7.2'
-    compile 'org.subethamail:subethasmtp:3.1.7'
-    compile'ru.lanwen.verbalregex:java-verbal-expressions:1.6'
-    compile 'ch.qos.logback:logback-classic:1.2.3'
-    implementation 'mysql:mysql-connector-java:5.1.49'
-    implementation 'org.hibernate:hibernate-core:5.4.27.Final'
+    }
 
-}
+    task testGroups (type:Test) {
+        useTestNG {
+            suites 'src/test/resoures/testng-groups.xml' //groovy
+        }
+        if (project.hasProperty('browser')) {
+            systemProperty 'browser', "${browser}"
+        }
+        if (project.hasProperty('target')) {
+            systemProperty 'target', "${target}"
+        }
+        if (project.hasProperty('verifyUI')) {
+            systemProperty 'verifyUI', "${verifyUI}"
+        }
+        if (project.hasProperty('platform')) {
+            systemProperty 'platform', "${platform}"
+        }
+    }
 
-test {
-    useTestNG {
-        suites 'src/test/resources/testng.xml'
-    }
-    if (project.hasProperty('browser')) {
-        systemProperty 'browser', "${browser}"
-    }
-    if (project.hasProperty('target')) {
-        systemProperty 'target', "${target}"
-    }
-    if (project.hasProperty('verifyUi')) {
-        systemProperty 'verifyUi', "${tverifyUi}"
-    }
-}
+    task testContacts (type:Test) {
+        useTestNG {
+            suites 'src/test/resoures/testng-contacts.xml'
+        }
+        if (project.hasProperty('browser')) {
+            systemProperty 'browser', "${browser}"
+        }
+        if (project.hasProperty('target')) {
+            systemProperty 'target', "${target}"
+        }
+        if (project.hasProperty('verifyUI')) {
+            systemProperty 'verifyUI', "${verifyUI}"
+        }
+        if (project.hasProperty('platform')) {
+            systemProperty 'platform', "${platform}"
+        }
+    }}

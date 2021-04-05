@@ -1,0 +1,13 @@
+423  [main] DEBUG o.s.smtp.server.CommandHandler - Added command: AUTH
+429  [main] DEBUG o.s.smtp.server.CommandHandler - Added command: DATA
+429  [main] DEBUG o.s.smtp.server.CommandHandler - Added command: EHLO
+429  [main] DEBUG o.s.smtp.server.CommandHandler - Added command: HELO
+429  [main] DEBUG o.s.smtp.server.CommandHandler - Added command: HELP
+429  [main] DEBUG o.s.smtp.server.CommandHandler - Added command: MAIL
+429  [main] DEBUG o.s.smtp.server.CommandHandler - Added command: NOOP
+429  [main] DEBUG o.s.smtp.server.CommandHandler - Added command: QUIT
+429  [main] DEBUG o.s.smtp.server.CommandHandler - Added command: RCPT
+429  [main] DEBUG o.s.smtp.server.CommandHandler - Added command: RSET
+429  [main] DEBUG o.s.smtp.server.CommandHandler - Added command: STARTTLS
+429  [main] DEBUG o.s.smtp.server.CommandHandler - Added command: VRFY
+430  [main] INFO  o.s.smtp.server.SMTPServer - SMTP server *:25 stopping

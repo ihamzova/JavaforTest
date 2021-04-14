@@ -40,6 +40,13 @@ public class DbHelper {
     session.getTransaction().commit();
     session.close();
   }*/
-
+  public List<UserData> getAllUsers() {
+    Session session = sessionFactory.openSession();
+    session.beginTransaction();
+    List<UserData> result = session.createQuery("from UserData").getResultList();
+    session.getTransaction().commit();
+    session.close();
+    return result;
+  }
 
 }

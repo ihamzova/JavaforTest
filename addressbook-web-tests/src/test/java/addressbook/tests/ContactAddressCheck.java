@@ -1,7 +1,7 @@
 package addressbook.tests;
 
 
-import addressbook.model.UserData;
+import addressbook.appmodel.UserData;
 import org.testng.annotations.Test;
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.MatcherAssert.assertThat;

@@ -1,6 +1,6 @@
 package addressbook.generators;
 
-import addressbook.model.UserData;
+import addressbook.appmodel.UserData;
 import com.beust.jcommander.JCommander;
 import com.beust.jcommander.Parameter;
 import com.beust.jcommander.ParameterException;

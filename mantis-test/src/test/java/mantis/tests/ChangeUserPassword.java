@@ -14,7 +14,7 @@ import java.util.List;
 
 import static org.testng.AssertJUnit.assertTrue;
 
-public class ChangeUserPassword extends Testbase{
+public class ChangeUserPassword extends Testbase {
 
   @BeforeMethod
   public void startMailServer() {
@@ -29,10 +29,9 @@ public class ChangeUserPassword extends Testbase{
       return;
     }
     UserData modifyUser = before.iterator().next();
-    System.out.println(before);
-    System.out.println(modifyUser);
+
     long time = System.currentTimeMillis();
-    String realName = String.format("realName%s",time);
+
     String password = "password";
     String email = modifyUser.getEmail();
     String user = modifyUser.getUsername();
@@ -42,9 +41,9 @@ public class ChangeUserPassword extends Testbase{
     app.user().resetPassword();
     app.session().logout();
 
-    List<MailMessage> mailMessages =  app.mail().waitForMail(1, 10000);
-    String confirmationLink= findConfirmationLink (mailMessages, email);
-    app.registration().finish(confirmationLink, password, realName);
+    List<MailMessage> mailMessages = app.mail().waitForMail(2, 60000);
+    String confirmationLink = findConfirmationLink(mailMessages, email);
+    app.registration().finish(confirmationLink, password);
     assertTrue(app.newSession().login(user, password));
   }
 
@@ -56,7 +55,7 @@ public class ChangeUserPassword extends Testbase{
   }
 
   @AfterMethod(alwaysRun = true)
-  public void stopMailServer(){
+  public void stopMailServer() {
     app.mail().stop();
   }
 

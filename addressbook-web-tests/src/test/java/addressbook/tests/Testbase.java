@@ -1,11 +1,9 @@
 package addressbook.tests;
 
-import addressbook.appmanager.ApplicationManager;
-import addressbook.model.GroupData;
-import addressbook.model.Groups;
-import addressbook.model.UserData;
-import addressbook.model.Users;
-import org.hamcrest.MatcherAssert;
+import addressbook.managers.ApplicationManager;
+import addressbook.appmodel.GroupData;
+import addressbook.appmodel.Groups;
+import addressbook.appmodel.Users;
 import org.openqa.selenium.remote.BrowserType;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;

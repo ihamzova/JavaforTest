@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="5c58e91d-e032-4713-ad48-3170298dee65" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../addressbook-web-tests/.idea/modules/addressbook-web-tests.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../addressbook-web-tests/.idea/modules/addressbook-web-tests.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../addressbook-web-tests/out/test/classes/addressbook/generators/GroupDataGenerator.class" beforeDir="false" afterPath="$PROJECT_DIR$/../addressbook-web-tests/out/test/classes/addressbook/generators/GroupDataGenerator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../addressbook-web-tests/out/test/classes/addressbook/generators/UserDataGenerator.class" beforeDir="false" afterPath="$PROJECT_DIR$/../addressbook-web-tests/out/test/classes/addressbook/generators/UserDataGenerator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../addressbook-web-tests/out/test/classes/addressbook/tests/ContactAddressCheck.class" beforeDir="false" afterPath="$PROJECT_DIR$/../addressbook-web-tests/out/test/classes/addressbook/tests/ContactAddressCheck.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../addressbook-web-tests/out/test/classes/addressbook/tests/ContactEmailCheck.class" beforeDir="false" afterPath="$PROJECT_DIR$/../addressbook-web-tests/out/test/classes/addressbook/tests/ContactEmailCheck.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../addressbook-web-tests/out/test/classes/addressbook/tests/ContactPhoneCheck.class" beforeDir="false" afterPath="$PROJECT_DIR$/../addressbook-web-tests/out/test/classes/addressbook/tests/ContactPhoneCheck.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../addressbook-web-tests/out/test/classes/addressbook/tests/DbConnectionTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/../addressbook-web-tests/out/test/classes/addressbook/tests/DbConnectionTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../addressbook-web-tests/out/test/classes/addressbook/tests/GroupDeletion.class" beforeDir="false" afterPath="$PROJECT_DIR$/../addressbook-web-tests/out/test/classes/addressbook/tests/GroupDeletion.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../addressbook-web-tests/out/test/classes/addressbook/tests/GroupModification.class" beforeDir="false" afterPath="$PROJECT_DIR$/../addressbook-web-tests/out/test/classes/addressbook/tests/GroupModification.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../addressbook-web-tests/out/test/classes/addressbook/tests/Groupcreation.class" beforeDir="false" afterPath="$PROJECT_DIR$/../addressbook-web-tests/out/test/classes/addressbook/tests/Groupcreation.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../addressbook-web-tests/out/test/classes/addressbook/tests/HbConnectionTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/../addressbook-web-tests/out/test/classes/addressbook/tests/HbConnectionTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../addressbook-web-tests/out/test/classes/addressbook/tests/Testbase.class" beforeDir="false" afterPath="$PROJECT_DIR$/../addressbook-web-tests/out/test/classes/addressbook/tests/Testbase.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../addressbook-web-tests/out/test/classes/addressbook/tests/UserAddtoGroup.class" beforeDir="false" afterPath="$PROJECT_DIR$/../addressbook-web-tests/out/test/classes/addressbook/tests/UserAddtoGroup.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../addressbook-web-tests/out/test/classes/addressbook/tests/UserCreation$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/../addressbook-web-tests/out/test/classes/addressbook/tests/UserCreation$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../addressbook-web-tests/out/test/classes/addressbook/tests/UserCreation.class" beforeDir="false" afterPath="$PROJECT_DIR$/../addressbook-web-tests/out/test/classes/addressbook/tests/UserCreation.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../addressbook-web-tests/out/test/classes/addressbook/tests/UserDeletefromGroup.class" beforeDir="false" afterPath="$PROJECT_DIR$/../addressbook-web-tests/out/test/classes/addressbook/tests/UserDeletefromGroup.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../addressbook-web-tests/out/test/classes/addressbook/tests/UserDeletion.class" beforeDir="false" afterPath="$PROJECT_DIR$/../addressbook-web-tests/out/test/classes/addressbook/tests/UserDeletion.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../addressbook-web-tests/out/test/classes/addressbook/tests/UserModification.class" beforeDir="false" afterPath="$PROJECT_DIR$/../addressbook-web-tests/out/test/classes/addressbook/tests/UserModification.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../addressbook-web-tests/out/test/resources/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../addressbook-web-tests/out/test/resources/hibernate.cfg.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../addressbook-web-tests/src/test/java/addressbook/appmanager/ApplicationManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/../addressbook-web-tests/src/test/java/addressbook/managers/ApplicationManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../addressbook-web-tests/src/test/java/addressbook/appmanager/DbHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/../addressbook-web-tests/src/test/java/addressbook/managers/DbHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../addressbook-web-tests/src/test/java/addressbook/appmanager/GroupHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/../addressbook-web-tests/src/test/java/addressbook/managers/GroupHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../addressbook-web-tests/src/test/java/addressbook/appmanager/Helperbase.java" beforeDir="false" afterPath="$PROJECT_DIR$/../addressbook-web-tests/src/test/java/addressbook/managers/Helperbase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../addressbook-web-tests/src/test/java/addressbook/appmanager/NavigationHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/../addressbook-web-tests/src/test/java/addressbook/managers/NavigationHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../addressbook-web-tests/src/test/java/addressbook/appmanager/SessionHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/../addressbook-web-tests/src/test/java/addressbook/managers/SessionHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../addressbook-web-tests/src/test/java/addressbook/appmanager/UserHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/../addressbook-web-tests/src/test/java/addressbook/managers/UserHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../addressbook-web-tests/src/test/java/addressbook/generators/GroupDataGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/../addressbook-web-tests/src/test/java/addressbook/generators/GroupDataGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../addressbook-web-tests/src/test/java/addressbook/generators/UserDataGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/../addressbook-web-tests/src/test/java/addressbook/generators/UserDataGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../addressbook-web-tests/src/test/java/addressbook/model/GroupData.java" beforeDir="false" afterPath="$PROJECT_DIR$/../addressbook-web-tests/src/test/java/addressbook/appmodel/GroupData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../addressbook-web-tests/src/test/java/addressbook/model/Groups.java" beforeDir="false" afterPath="$PROJECT_DIR$/../addressbook-web-tests/src/test/java/addressbook/appmodel/Groups.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../addressbook-web-tests/src/test/java/addressbook/model/UserData.java" beforeDir="false" afterPath="$PROJECT_DIR$/../addressbook-web-tests/src/test/java/addressbook/appmodel/UserData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../addressbook-web-tests/src/test/java/addressbook/model/Users.java" beforeDir="false" afterPath="$PROJECT_DIR$/../addressbook-web-tests/src/test/java/addressbook/appmodel/Users.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../addressbook-web-tests/src/test/java/addressbook/tests/ContactAddressCheck.java" beforeDir="false" afterPath="$PROJECT_DIR$/../addressbook-web-tests/src/test/java/addressbook/tests/ContactAddressCheck.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../addressbook-web-tests/src/test/java/addressbook/tests/ContactEmailCheck.java" beforeDir="false" afterPath="$PROJECT_DIR$/../addressbook-web-tests/src/test/java/addressbook/tests/ContactEmailCheck.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../addressbook-web-tests/src/test/java/addressbook/tests/ContactPhoneCheck.java" beforeDir="false" afterPath="$PROJECT_DIR$/../addressbook-web-tests/src/test/java/addressbook/tests/ContactPhoneCheck.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../addressbook-web-tests/src/test/java/addressbook/tests/DbConnectionTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../addressbook-web-tests/src/test/java/addressbook/tests/DbConnectionTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../addressbook-web-tests/src/test/java/addressbook/tests/GroupDeletion.java" beforeDir="false" afterPath="$PROJECT_DIR$/../addressbook-web-tests/src/test/java/addressbook/tests/GroupDeletion.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../addressbook-web-tests/src/test/java/addressbook/tests/GroupModification.java" beforeDir="false" afterPath="$PROJECT_DIR$/../addressbook-web-tests/src/test/java/addressbook/tests/GroupModification.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../addressbook-web-tests/src/test/java/addressbook/tests/Groupcreation.java" beforeDir="false" afterPath="$PROJECT_DIR$/../addressbook-web-tests/src/test/java/addressbook/tests/Groupcreation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../addressbook-web-tests/src/test/java/addressbook/tests/HbConnectionTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../addressbook-web-tests/src/test/java/addressbook/tests/HbConnectionTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../addressbook-web-tests/src/test/java/addressbook/tests/Testbase.java" beforeDir="false" afterPath="$PROJECT_DIR$/../addressbook-web-tests/src/test/java/addressbook/tests/Testbase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../addressbook-web-tests/src/test/java/addressbook/tests/UserAddtoGroup.java" beforeDir="false" afterPath="$PROJECT_DIR$/../addressbook-web-tests/src/test/java/addressbook/tests/UserAddtoGroup.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../addressbook-web-tests/src/test/java/addressbook/tests/UserCreation.java" beforeDir="false" afterPath="$PROJECT_DIR$/../addressbook-web-tests/src/test/java/addressbook/tests/UserCreation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../addressbook-web-tests/src/test/java/addressbook/tests/UserDeletefromGroup.java" beforeDir="false" afterPath="$PROJECT_DIR$/../addressbook-web-tests/src/test/java/addressbook/tests/UserDeletefromGroup.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../addressbook-web-tests/src/test/java/addressbook/tests/UserDeletion.java" beforeDir="false" afterPath="$PROJECT_DIR$/../addressbook-web-tests/src/test/java/addressbook/tests/UserDeletion.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../addressbook-web-tests/src/test/java/addressbook/tests/UserModification.java" beforeDir="false" afterPath="$PROJECT_DIR$/../addressbook-web-tests/src/test/java/addressbook/tests/UserModification.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../addressbook-web-tests/src/test/resources/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../addressbook-web-tests/src/test/resources/hibernate.cfg.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/classes/mantis/appmanager/ApplicationManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/classes/mantis/appmanager/ApplicationManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/classes/mantis/appmanager/DbHelper.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/classes/mantis/appmanager/DbHelper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/classes/mantis/appmanager/HelperBase.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/classes/mantis/appmanager/HelperBase.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/classes/mantis/appmanager/HttpSession.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/classes/mantis/appmanager/HttpSession.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/classes/mantis/appmanager/MailHelper.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/classes/mantis/appmanager/MailHelper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/classes/mantis/appmanager/RegistrationHelper.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/classes/mantis/appmanager/RegistrationHelper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/classes/mantis/model/UserData.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/classes/mantis/model/UserData.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/classes/mantis/tests/ChangeUserPassword.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/classes/mantis/tests/ChangeUserPassword.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/classes/mantis/tests/HbConnectionTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/classes/mantis/tests/HbConnectionTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/classes/mantis/tests/LoginTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/classes/mantis/tests/LoginTests.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/classes/mantis/tests/RegistrationTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/classes/mantis/tests/RegistrationTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/classes/mantis/tests/Testbase.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/classes/mantis/tests/Testbase.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/resources/local.properties" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/resources/local.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/mantis/appmanager/ApplicationManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/mantis/appmanager/ApplicationManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/mantis/appmanager/DbHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/mantis/appmanager/DbHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/mantis/appmanager/HttpSession.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/mantis/appmanager/HttpSession.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/mantis/appmanager/MailHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/mantis/appmanager/MailHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/mantis/appmanager/RegistrationHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/mantis/appmanager/RegistrationHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/mantis/model/UserData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/mantis/model/UserData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/mantis/model/Users.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/mantis/model/Users.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/mantis/tests/ChangeUserPassword.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/mantis/tests/ChangeUserPassword.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/mantis/tests/HbConnectionTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/mantis/tests/HbConnectionTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/mantis/tests/LoginTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/mantis/tests/LoginTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/mantis/tests/RegistrationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/mantis/tests/RegistrationTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/mantis/tests/Testbase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/mantis/tests/Testbase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/log/test-20210405T110727.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/log/test-20210405T111325.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/log/test-20210405T113540.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/log/test-20210405T115051.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/log/test-20210405T115111.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/log/test-20210405T115216.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/log/test-20210405T115843.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/log/test-20210405T194017.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/log/test-20210406T075112.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/log/test-20210406T075649.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/local.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/local.properties" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="mantis-test" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="mantis-test" type="f1a62948:ProjectNode" />
+                <item name="Run Configurations" type="7b0102dc:RunConfigurationsNode" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="ProjectId" id="1qnKMMcuLqJMBKUoJqtIVQ4WTkv" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="autoscrollFromSource" value="true" />
+    <option name="autoscrollToSource" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+    <option name="showMembers" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.3264368" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.project.gradle" />
+  </component>
+  <component name="RunManager" selected="TestNG.ChangeUserPassword.testChangingUserPassword">
+    <configuration name="RegistrationTest.testRegistration" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests &quot;mantis.tests.RegistrationTest.testRegistration&quot;" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="mantis-test" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="WORKING_DIRECTORY" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="mantis-test" />
+      <option name="filePath" />
+      <option name="vmParameters" />
+      <option name="alternativeJrePath" />
+      <option name="programParameters" />
+      <option name="passParentEnvs" value="true" />
+      <option name="workingDirectory" />
+      <option name="isAlternativeJrePathEnabled" value="false" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="filePath" />
+      <option name="vmParameters" />
+      <option name="alternativeJrePath" />
+      <option name="programParameters" />
+      <option name="passParentEnvs" value="true" />
+      <option name="workingDirectory" />
+      <option name="isAlternativeJrePathEnabled" value="false" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="WORKING_DIRECTORY" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ChangeUserPassword.testChangingUserPassword" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="mantis-test.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="mantis.tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="mantis.tests" />
+      <option name="MAIN_CLASS_NAME" value="mantis.tests.ChangeUserPassword" />
+      <option name="METHOD_NAME" value="testChangingUserPassword" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="HbConnectionTest.testHbConnection" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="mantis-test.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="mantis.tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="mantis.tests" />
+      <option name="MAIN_CLASS_NAME" value="mantis.tests.HbConnectionTest" />
+      <option name="METHOD_NAME" value="testHbConnection" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LoginTests.testLogin" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="mantis-test.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="mantis.tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="mantis.tests" />
+      <option name="MAIN_CLASS_NAME" value="mantis.tests.LoginTests" />
+      <option name="METHOD_NAME" value="testLogin" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RegistrationTest.testRegistration" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="mantis-test.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="mantis.tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="mantis.tests" />
+      <option name="MAIN_CLASS_NAME" value="mantis.tests.RegistrationTest" />
+      <option name="METHOD_NAME" value="testRegistration" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="TestNG.ChangeUserPassword.testChangingUserPassword" />
+        <item itemvalue="TestNG.RegistrationTest.testRegistration" />
+        <item itemvalue="TestNG.HbConnectionTest.testHbConnection" />
+        <item itemvalue="TestNG.LoginTests.testLogin" />
+        <item itemvalue="Gradle.RegistrationTest.testRegistration" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="5c58e91d-e032-4713-ad48-3170298dee65" name="Default Changelist" comment="" />
+      <created>1617709865715</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1617709865715</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/mantis/appmanager/RegistrationHelper.java</url>
+          <line>13</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

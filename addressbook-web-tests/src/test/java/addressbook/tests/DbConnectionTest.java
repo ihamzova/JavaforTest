@@ -1,7 +1,7 @@
 package addressbook.tests;
 
-import addressbook.model.GroupData;
-import addressbook.model.Groups;
+import addressbook.appmodel.GroupData;
+import addressbook.appmodel.Groups;
 import org.testng.annotations.Test;
 
 import java.sql.*;

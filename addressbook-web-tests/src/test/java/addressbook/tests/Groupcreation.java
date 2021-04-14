@@ -1,7 +1,7 @@
 package addressbook.tests;
 
-import addressbook.model.GroupData;
-import addressbook.model.Groups;
+import addressbook.appmodel.GroupData;
+import addressbook.appmodel.Groups;
 import com.thoughtworks.xstream.XStream;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
@@ -41,6 +41,7 @@ public class Groupcreation extends Testbase {
   public void testCreateNewGroup(GroupData group) throws Exception {
     app.goTo().groupPage();
     Groups before = app.db().groups();
+    app.goTo().groupPage();
     app.group().create(group);
     assertThat(app.group().getGroupCount(), equalTo(before.size() + 1));
     Groups after = app.db().groups();

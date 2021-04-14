@@ -1,8 +1,9 @@
 package mantis.appmanager;
 
+import mantis.model.MailMessage;
 import org.subethamail.wiser.Wiser;
 import org.subethamail.wiser.WiserMessage;
-import mantis.model.MailMessage;
+
 import javax.mail.MessagingException;
 import javax.mail.internet.MimeMessage;
 import java.io.IOException;
@@ -33,7 +34,7 @@ public class MailHelper {
         e.printStackTrace();
       }
     }
-    throw new Error("No mail :(");
+    throw new Error("No mail:(");
   }
 
   public static MailMessage toModelMail(WiserMessage m) {

@@ -1,9 +1,9 @@
 package addressbook.tests;
 
-import addressbook.model.GroupData;
-import addressbook.model.Groups;
-import addressbook.model.UserData;
-import addressbook.model.Users;
+import addressbook.appmodel.GroupData;
+import addressbook.appmodel.Groups;
+import addressbook.appmodel.UserData;
+import addressbook.appmodel.Users;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 

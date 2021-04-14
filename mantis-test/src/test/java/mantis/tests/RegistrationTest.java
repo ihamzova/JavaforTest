@@ -1,5 +1,6 @@
 package mantis.tests;
 
+
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -21,15 +22,14 @@ public class RegistrationTest extends Testbase {
 
   @Test
   public void testRegistration() throws IOException, MessagingException {
-    long time = System.currentTimeMillis();
-    String email = String.format("user%s@localhost.localdomain", time);
-    String user = String.format("user%s", time);
-    String realName = String.format("realName%s", time);
+    long now = System.currentTimeMillis();
+    String email = String.format("user%s@localhost.localdomain", now);
+    String user = String.format("user%s", now);
     String password = "password";
     app.registration().start(user, email);
     List<MailMessage> mailMessages = app.mail().waitForMail(2, 10000);
     String confirmationLink = findConfirmationLink(mailMessages, email);
-    app.registration().finish(confirmationLink, password, realName);
+    app.registration().finish(confirmationLink, password);
     assertTrue(app.newSession().login(user, password));
   }
 

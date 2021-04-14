@@ -1,7 +1,7 @@
 package addressbook.tests;
 
-import addressbook.model.UserData;
-import addressbook.model.Users;
+import addressbook.appmodel.UserData;
+import addressbook.appmodel.Users;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 

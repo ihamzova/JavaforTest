@@ -6,7 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="5c58e91d-e032-4713-ad48-3170298dee65" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/mantis/tests/ChangeUserPassword.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/mantis/tests/ChangeUserPassword.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/classes/mantis/appmanager/ApplicationManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/classes/mantis/appmanager/ApplicationManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/classes/mantis/tests/Testbase.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/classes/mantis/tests/Testbase.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/mantis/appmanager/ApplicationManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/mantis/appmanager/ApplicationManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/mantis/tests/Testbase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/mantis/tests/Testbase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/local.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/local.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,11 +34,6 @@
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="mantis-test" type="f1a62948:ProjectNode" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="mantis-test" type="f1a62948:ProjectNode" />
-                <item name="Run Configurations" type="7b0102dc:RunConfigurationsNode" />
               </path>
             </expand>
             <select />
@@ -79,28 +78,7 @@
     <property name="project.structure.side.proportion" value="0.3264368" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.project.gradle" />
   </component>
-  <component name="RunManager" selected="TestNG.ChangeUserPassword.testChangingUserPassword">
-    <configuration name="RegistrationTest.testRegistration" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;mantis.tests.RegistrationTest.testRegistration&quot;" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="TestNG.SoapTests.testCreateIssue">
     <configuration default="true" type="JetRunConfigurationType">
       <module name="mantis-test" />
       <option name="VM_PARAMETERS" />
@@ -184,24 +162,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LoginTests.testLogin" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="mantis-test.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="mantis.tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="mantis.tests" />
-      <option name="MAIN_CLASS_NAME" value="mantis.tests.LoginTests" />
-      <option name="METHOD_NAME" value="testLogin" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="RegistrationTest.testRegistration" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="mantis-test.test" />
       <extension name="coverage">
@@ -220,13 +180,49 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="SoapTests.testCreateIssue" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="mantis-test.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="mantis.tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="mantis.tests" />
+      <option name="MAIN_CLASS_NAME" value="mantis.tests.SoapTests" />
+      <option name="METHOD_NAME" value="testCreateIssue" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SoapTests.testsGetProjects" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="mantis-test.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="mantis.tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="mantis.tests" />
+      <option name="MAIN_CLASS_NAME" value="mantis.tests.SoapTests" />
+      <option name="METHOD_NAME" value="testsGetProjects" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.SoapTests.testCreateIssue" />
+        <item itemvalue="TestNG.SoapTests.testsGetProjects" />
         <item itemvalue="TestNG.ChangeUserPassword.testChangingUserPassword" />
         <item itemvalue="TestNG.RegistrationTest.testRegistration" />
         <item itemvalue="TestNG.HbConnectionTest.testHbConnection" />
-        <item itemvalue="TestNG.LoginTests.testLogin" />
-        <item itemvalue="Gradle.RegistrationTest.testRegistration" />
       </list>
     </recent_temporary>
   </component>

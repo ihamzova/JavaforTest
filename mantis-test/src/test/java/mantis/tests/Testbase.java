@@ -1,11 +1,17 @@
 package mantis.tests;
 
+import biz.futureware.mantis.rpc.soap.client.IssueData;
 import mantis.appmanager.ApplicationManager;
 import org.openqa.selenium.remote.BrowserType;
+import org.testng.SkipException;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
 
+import javax.xml.rpc.ServiceException;
 import java.io.File;
+import java.net.MalformedURLException;
+import java.rmi.RemoteException;
+
 
 public class Testbase {
 
@@ -24,6 +30,16 @@ public class Testbase {
     app.stop();
   }
 
+  public boolean isIssueOpen(int issueId) throws RemoteException, ServiceException, MalformedURLException {
+    IssueData issues = app.soap().getIssue(issueId);
+    return !issues.getStatus().getName().equals("closed");
+  }
+
+  public void skipIfNotFixed(int issueId) throws RemoteException, ServiceException, MalformedURLException {
+    if (isIssueOpen(issueId) == true) {
+      throw new SkipException("Ignored because of issue " + issueId);
+    }
+  }
 
 
 }

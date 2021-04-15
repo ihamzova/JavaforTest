@@ -25,6 +25,7 @@ public class ApplicationManager {
   private NavigationHelper goTo;
   private UserHelper user;
   private SessionHelper sessionHelper;
+  private SoapHelper soapHelper;
 
   public ApplicationManager(String browser) {
     this.browser = browser;
@@ -38,18 +39,6 @@ public class ApplicationManager {
     String target = System.getProperty("target", "local");
     properties.load(new FileReader(new File(String.format("src/test/resources/%s.properties", target))));
     dbHelper = new DbHelper();
-//    if (browser.equals(BrowserType.CHROME)) {
-//      wd = new ChromeDriver();
-//    } else if (browser.equals(BrowserType.FIREFOX)) {
-//      wd = new FirefoxDriver();
-//    } else if (browser.equals(BrowserType.IE)) {
-//      wd = new InternetExplorerDriver();
-//    }
-//
-//    wd.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
-//    wd.get(properties.getProperty("web.baseUrl"));
-
-
   }
 
   public void stop() {
@@ -58,14 +47,9 @@ public class ApplicationManager {
     }
   }
 
-  public HttpSession newSession(){
-    return new HttpSession(this);
-  }
-
   public String getProperty(String key) {
     return properties.getProperty(key);
   }
-
 
 
   public WebDriver getDriver() {
@@ -88,6 +72,9 @@ public class ApplicationManager {
       registrationHelper = new RegistrationHelper(this);
     }
     return registrationHelper;
+  }
+  public HttpSession newSession() {
+    return new HttpSession(this);
   }
   public MailHelper mail() {
     if (mailHelper == null) {
@@ -122,5 +109,10 @@ public class ApplicationManager {
     }
     return user;
   }
-
+  public SoapHelper soap() {
+    if (soapHelper == null) {
+      soapHelper = new SoapHelper(this);
+    }
+    return soapHelper;
+  }
 }

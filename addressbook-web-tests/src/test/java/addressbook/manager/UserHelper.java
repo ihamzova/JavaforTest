@@ -1,8 +1,8 @@
-package addressbook.managers;
+package addressbook.manager;
 
-import addressbook.appmodel.GroupData;
-import addressbook.appmodel.UserData;
-import addressbook.appmodel.Users;
+import addressbook.model.GroupData;
+import addressbook.model.UserData;
+import addressbook.model.Users;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;

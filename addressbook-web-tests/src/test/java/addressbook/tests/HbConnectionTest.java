@@ -1,7 +1,7 @@
 package addressbook.tests;
 
 
-import addressbook.appmodel.UserData;
+import addressbook.model.UserData;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.boot.MetadataSources;

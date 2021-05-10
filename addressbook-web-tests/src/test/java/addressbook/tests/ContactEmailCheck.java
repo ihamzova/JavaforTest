@@ -1,6 +1,6 @@
 package addressbook.tests;
 
-import addressbook.appmodel.UserData;
+import addressbook.model.UserData;
 import org.testng.annotations.Test;
 
 import java.util.Arrays;

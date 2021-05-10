@@ -1,9 +1,9 @@
 package addressbook.tests;
 
-import addressbook.managers.ApplicationManager;
-import addressbook.appmodel.GroupData;
-import addressbook.appmodel.Groups;
-import addressbook.appmodel.Users;
+import addressbook.manager.ApplicationManager;
+import addressbook.model.GroupData;
+import addressbook.model.Groups;
+import addressbook.model.Users;
 import org.openqa.selenium.remote.BrowserType;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
@@ -11,8 +11,7 @@ import org.testng.annotations.BeforeSuite;
 import java.util.stream.Collectors;
 
 import static org.hamcrest.CoreMatchers.equalTo;
-
-import static org.hamcrest.MatcherAssert.*;
+import static org.hamcrest.MatcherAssert.assertThat;
 
 public class Testbase {
 

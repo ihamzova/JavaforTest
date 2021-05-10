@@ -1,9 +1,9 @@
 package addressbook.tests;
 
-import addressbook.appmodel.Users;
+import addressbook.model.Users;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
-import addressbook.appmodel.UserData;
+import addressbook.model.UserData;
 
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.MatcherAssert.assertThat;

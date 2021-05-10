@@ -1,4 +1,4 @@
-package addressbook.managers;
+package addressbook.manager;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;

@@ -1,4 +1,4 @@
-package addressbook.managers;
+package addressbook.manager;
 
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.ExpectedConditions;

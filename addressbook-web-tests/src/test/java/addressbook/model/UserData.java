@@ -1,4 +1,4 @@
-package addressbook.appmodel;
+package addressbook.model;
 
 import org.hibernate.annotations.Type;
 

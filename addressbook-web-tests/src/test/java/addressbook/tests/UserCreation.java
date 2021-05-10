@@ -1,7 +1,7 @@
 package addressbook.tests;
 
-import addressbook.appmodel.UserData;
-import addressbook.appmodel.Users;
+import addressbook.model.UserData;
+import addressbook.model.Users;
 import com.google.common.reflect.TypeToken;
 import com.google.gson.Gson;
 import org.testng.annotations.DataProvider;

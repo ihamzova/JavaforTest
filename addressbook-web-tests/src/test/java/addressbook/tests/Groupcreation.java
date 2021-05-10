@@ -1,7 +1,7 @@
 package addressbook.tests;
 
-import addressbook.appmodel.GroupData;
-import addressbook.appmodel.Groups;
+import addressbook.model.GroupData;
+import addressbook.model.Groups;
 import com.thoughtworks.xstream.XStream;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;

@@ -1,13 +1,12 @@
 package addressbook.tests;
 
-import addressbook.appmodel.UserData;
-import addressbook.appmodel.Users;
+import addressbook.model.UserData;
+import addressbook.model.Users;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.MatcherAssert.assertThat;
-import static org.testng.Assert.assertEquals;
 
 public class UserDeletion extends Testbase {
   @BeforeMethod

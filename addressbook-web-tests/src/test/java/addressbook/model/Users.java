@@ -1,4 +1,4 @@
-package addressbook.appmodel;
+package addressbook.model;
 
 import com.google.common.collect.ForwardingSet;
 

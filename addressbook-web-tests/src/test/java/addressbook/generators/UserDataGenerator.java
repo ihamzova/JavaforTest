@@ -75,9 +75,9 @@ public class UserDataGenerator {
     List<UserData> users = new ArrayList<>();
     for (int i = 0; i < count; i++) {
       users.add(new UserData()
-              .withName(String.format("Ирина %s", i))
-              .withSurname(String.format("Кузнецова %s", i))
-              .withaddress(String.format("Москва %s", i))
+              .withName(String.format("Irina %s", i))
+              .withSurname(String.format("Ivanova %s", i))
+              .withaddress(String.format("Spb %s", i))
               .withEmail(String.format("email1%s@mail.com", i))
               .withEmail2(String.format("email2%s@mail.com", i))
               .withEmail3(String.format("email3%s@mail.com", i))

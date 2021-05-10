@@ -17,7 +17,7 @@ public class GroupModification extends Testbase {
     if (app.db().groups().size()==0)
     {
       app.goTo().groupPage();
-      app.group().create(new GroupData().withName("Testgroup57"));
+      app.group().create(new GroupData().withName("Testgroup58"));
     }
 
   }
@@ -28,7 +28,7 @@ public class GroupModification extends Testbase {
     Groups before = app.db().groups();
     GroupData modifiedGroup = before.iterator().next();
     GroupData group = new GroupData().
-            withId(modifiedGroup.getId()).withName("Testgroup155").withHeader("группа1").withFooter("группа2");
+            withId(modifiedGroup.getId()).withName("Testgroup1573").withHeader("группа73").withFooter("группа23");
     app.goTo().groupPage();
     app.group().modify(group);
     Groups after = app.db().groups();

@@ -4,13 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5c58e91d-e032-4713-ad48-3170298dee65" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/modules/rest-sample.main.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules/rest-sample.test.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/classes/mantis/tests/Testbase.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/classes/mantis/tests/Testbase.class" afterDir="false" />
-    </list>
+    <list default="true" id="5c58e91d-e032-4713-ad48-3170298dee65" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -98,7 +92,24 @@
       <recent name="C:\Users\ikhamzov\Documents\GitHub\JavaforTest\rest-sample\src\test\java" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.RestAssuredTests">
+  <component name="RunManager" selected="TestNG.ChangeUserPassword">
+    <configuration name="ChangeUserPassword" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="mantis-test.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="mantis.tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="mantis.tests" />
+      <option name="MAIN_CLASS_NAME" value="mantis.tests.ChangeUserPassword" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="RestAssuredTests" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="rest-sample.test" />
       <extension name="coverage">
@@ -169,31 +180,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SkipTests.testSkip" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="rest-sample.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="rest.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="rest" />
-      <option name="MAIN_CLASS_NAME" value="rest.SkipTests" />
-      <option name="METHOD_NAME" value="testSkip" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.ChangeUserPassword" />
         <item itemvalue="TestNG.RestAssuredTests" />
         <item itemvalue="TestNG.RestTests.testCreateIssue (1)" />
         <item itemvalue="TestNG.RestAssuredTests.testCreateIssue" />
         <item itemvalue="TestNG.RestTests" />
-        <item itemvalue="TestNG.SkipTests.testSkip" />
       </list>
     </recent_temporary>
   </component>
@@ -215,11 +208,6 @@
           <url>file://$PROJECT_DIR$/src/test/java/mantis/appmanager/RegistrationHelper.java</url>
           <line>13</line>
           <option name="timeStamp" value="8" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/../rest-sample/src/test/java/rest/RestTests.java</url>
-          <line>21</line>
-          <option name="timeStamp" value="12" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

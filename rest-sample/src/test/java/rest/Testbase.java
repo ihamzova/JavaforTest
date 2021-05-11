@@ -21,10 +21,9 @@ class TestBase {
     String json = RestAssured.get("https://bugify.stqa.ru/api/issues/" + issueId + ".json").asString();
     JsonElement parsed = new JsonParser().parse(json);
     JsonElement issuesJson = parsed.getAsJsonObject().get("issues");
-    Set<Issue> issues = new Gson().fromJson(issuesJson, new TypeToken<Set<Issue>>() {
-    }.getType());
-    Issue issue = issues.iterator().next();
-    return !issue.getState().equals("closed");
+    //JsonElement obj = issuesJson.getAsJsonArray().get(0);
+    String issue_status = issuesJson.getAsJsonArray().get(0).getAsJsonObject().get("state_name").getAsString();
+    return !issue_status.equals("Closed");
 
   }
 

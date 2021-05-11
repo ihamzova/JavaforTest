@@ -25,7 +25,7 @@ public class RestAssuredTests extends TestBase {
 
   @BeforeMethod
   public void ensureIfIssueFixed() {
-    int issueId = 1045;
+    int issueId = 1;
     skipIfNotFixed(issueId);
   }
 
